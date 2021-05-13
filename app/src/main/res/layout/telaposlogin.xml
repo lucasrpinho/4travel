@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0D4DC">
+
+
+    <Button
+        android:id="@+id/btnCriarRoteiro"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="109dp"
+        android:backgroundTint="#174280"
+        android:text="@string/criarRoteiro" />
+
+    <Button
+        android:id="@+id/btnMostrarRoteiro"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginBottom="178dp"
+        android:backgroundTint="#174280"
+        android:text="@string/mostrarRoteiro" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/fortravel" />
+</RelativeLayout>
