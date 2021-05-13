@@ -34,10 +34,10 @@
     <string name="btnVoltar">Voltar</string>
     <string name="error_força_senha">A senha deve conter 8 caracteres, ao menos uma letra maiúscula, um número e um caracter especial</string>    <string name="app_name">4Travel</string>
 
-    <string name="txt1"> Paraty</string>
-    <string name="txt2"> Rj Capital</string>
-    <string name="txt3"> Teresópolis</string>
-    <string name="txt4"> Búzios </string>
+    <string name="recreio"> Recreio</string>
+    <string name="barradatijuca"> Barra da Tijuca</string>
+    <string name="guaratiba"> Guaratiba</string>
+    <string name="copabacana"> Copacabana</string>
 
     <string name="resumo">Diferenças entre os Destinos</string>
     <string name="todo">TODO</string>

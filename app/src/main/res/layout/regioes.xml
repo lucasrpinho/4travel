@@ -12,32 +12,31 @@
     tools:context=".activities.Regioes">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="329dp"
             android:layout_height="130dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="15dp"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
-            >
+            android:paddingTop="10dp">
 
             <ImageButton
-                android:id="@+id/btn_primeiro"
+                android:id="@+id/btn_guaratiba"
                 android:layout_width="130dp"
                 android:layout_height="117dp"
-                android:layout_marginStart="35dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/costa_verde"
-                android:contentDescription="@string/todo" />
+                android:background="@drawable/guaratiba"
+                android:contentDescription="@string/guaratiba" />
 
             <ImageButton
-                android:id="@+id/btn_segundo"
+                android:id="@+id/btn_barradatijuca"
                 android:layout_width="130dp"
                 android:layout_height="117dp"
-                android:background="@drawable/rjcapital"
-                android:contentDescription="TODO" />
+                android:background="@drawable/barradatijuca"
+                android:contentDescription="@string/barradatijuca" />
 
         </LinearLayout>
 
@@ -51,47 +50,46 @@
 
             <TextView
                 android:id="@+id/txt1"
-                android:layout_width="50dp"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
-                android:layout_marginStart="80dp"
-                android:text="@string/txt1"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:text="@string/guaratiba"
                 android:textColor="@android:color/black"
-                android:textSize="15sp"
-                android:layout_marginEnd="50dp"/>
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/txt2"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:text="@string/txt2"
+                android:text="@string/barradatijuca"
+                android:layout_marginStart="10dp"
                 android:textColor="@android:color/black"
-                android:textSize="15sp"
-                android:layout_marginStart="40dp"/>
+                android:textSize="15sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="330dp"
             android:layout_height="130dp"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="5dp"
             android:orientation="horizontal"
-            android:paddingTop="10dp"
-            >
+            android:paddingTop="10dp">
 
             <ImageButton
-                android:id="@+id/btn_terceiro"
+                android:id="@+id/btn_copacabana"
                 android:layout_width="130dp"
                 android:layout_height="117dp"
                 android:layout_marginStart="35dp"
                 android:layout_marginEnd="20dp"
-                android:background="@drawable/regiaoserrana1"
-                android:contentDescription="TODO" />
+                android:background="@drawable/copacabana"
+                android:contentDescription="@string/copabacana" />
 
             <ImageButton
-                android:id="@+id/btn_quarto"
+                android:id="@+id/btn_recreio"
                 android:layout_width="130dp"
                 android:layout_height="117dp"
-                android:background="@drawable/regiaodoslagos"
-                android:contentDescription="TODO" />
+                android:background="@drawable/recreio"
+                android:contentDescription="@string/recreio" />
 
 
         </LinearLayout>
@@ -108,19 +106,29 @@
                 android:id="@+id/txt3"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:text="@string/txt3"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="60dp"
+                android:text="@string/copabacana"
                 android:textColor="@android:color/black"
-                android:textSize="15sp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"/>
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/txt4"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:text="@string/txt4"
+                android:text="@string/recreio"
                 android:textColor="@android:color/black"
                 android:textSize="15sp"/>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ESCOLHA SUA REGIÃO"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"/>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
