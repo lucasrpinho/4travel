@@ -1,5 +1,6 @@
 package com.example.a4travel.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +43,13 @@ public class TelaPosLogin extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-
+        switch ((view.getId())){
+            case R.id.btnCriarRoteiro:
+                Intent i = new Intent(activity, Regioes.class);
+                startActivity(i);
+                break;
+            case R.id.btnMostrarRoteiro:
+                break;
+        }
     }
 }

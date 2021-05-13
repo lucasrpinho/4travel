@@ -32,14 +32,11 @@
     <string name="txtId">ID</string>
     <string name="edtID">ID que deseja deletar</string>
     <string name="btnVoltar">Voltar</string>
-    <string name="error_força_senha">A senha deve conter 8 caracteres, ao menos uma letra maiúscula, um número e um caracter especial</string>    <string name="app_name">4Travel</string>
-
+    <string name="error_força_senha">A senha deve conter 8 caracteres, ao menos uma letra maiúscula, um número e um caracter especial</string>
     <string name="recreio"> Recreio</string>
     <string name="barradatijuca"> Barra da Tijuca</string>
     <string name="guaratiba"> Guaratiba</string>
     <string name="copabacana"> Copacabana</string>
 
-    <string name="resumo">Diferenças entre os Destinos</string>
-    <string name="todo">TODO</string>
 
 </resources>

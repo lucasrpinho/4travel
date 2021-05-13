@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.4travel">
-        <activity android:name=".activities.ResetarSenha"></activity>
+        <activity android:name=".activities.Regioes"></activity>
+        <activity android:name=".activities.ResetarSenha" />
         <activity android:name=".activities.esqueciSenha" />
         <activity
             android:name=".activities.LoginActivity"
