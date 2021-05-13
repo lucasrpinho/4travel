@@ -85,10 +85,9 @@ public class InputValidation {
         pattern = Pattern.compile(senhaPadrao);
         matcher = pattern.matcher(senha);
         boolean x = false;
-        if (!senha.matches(".*\\d.*") ||!matcher.matches() || senha.length() < 8){
+        if (!senha.matches(".*\\d.*") || !matcher.matches() || senha.length() < 8){
             textInputLayout.setError(message);
             hideKeyboardFrom(textInputLayout);
-            x = false;
         }
         else {
             textInputLayout.setErrorEnabled(false);
