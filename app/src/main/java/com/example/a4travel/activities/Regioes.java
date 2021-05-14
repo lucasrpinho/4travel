@@ -1,5 +1,6 @@
 package com.example.a4travel.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -40,6 +41,23 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
 
     @Override
     public void onClick(View view) {
-
+        switch (view.getId()){
+            case R.id.btn_barradatijuca:
+                Intent barra = new Intent(activity, opcoesRoteiro.class);
+                startActivity(barra);
+                break;
+            case R.id.btn_copacabana:
+                Intent copa = new Intent (activity, opcoesRoteiro.class);
+                startActivity(copa);
+                break;
+            case R.id.btn_recreio:
+                Intent recreio = new Intent(activity, opcoesRoteiro.class);
+                startActivity(recreio);
+                break;
+            case R.id.btn_guaratiba:
+                Intent guaratiba = new Intent(activity, opcoesRoteiro.class);
+                startActivity(guaratiba);
+                break;
+        }
     }
 }

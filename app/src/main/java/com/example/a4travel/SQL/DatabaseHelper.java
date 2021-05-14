@@ -150,26 +150,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    /**
-     * This method is to delete user record
-     *
-     * @param user
-     *
-
-    public void deleteUser(User user) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        // delete user record by id
-        db.delete(TABLE_USUARIO, COLUMN_USUARIO_ID + " = ?",
-                new String[]{String.valueOf(user.getId())});
-        db.close();
-    }*/
-
-    /**
-     * This method to check user exist or not
-     *
-     * @param email
-     * @return true/false
-     */
     public boolean checkUser(String email) {
         // array of columns to fetch
         String[] columns = {

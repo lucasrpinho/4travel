@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundroteiro">
+
+
+    <ImageView
+        android:layout_width="251dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="false"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/fortravel"
+        android:contentDescription="@string/todo" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="141dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/roteiroCompleto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/precisoHotel"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/roteiroCompleto"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/precisoHotel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/precisoPasseio"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="3dp"
+            android:text="@string/precisoHotel"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/precisoPasseio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/precisoGastronomia"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="7dp"
+            android:text="@string/precisoPasseio"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/precisoGastronomia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginBottom="238dp"
+            android:text="@string/precisoGastronomia"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="168dp"
+        android:layout_marginBottom="177dp"
+        android:textSize="20dp"
+        android:backgroundTint="#174280"
+        android:text="@string/continuar" />
+
+
+
+
+</RelativeLayout>

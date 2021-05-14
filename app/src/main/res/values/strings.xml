@@ -2,7 +2,6 @@
     <string name="app_name">4travel</string>
     <string name="senha">Senha</string>
     <string name="email">E-mail</string>
-    <string name="todo">TODO</string>
     <string name="registrar">Cadastre-se aqui</string>
     <string name="login">ENTRAR</string>
     <string name="esqueci_minha_senha">Esqueci minha senha</string>
@@ -37,6 +36,12 @@
     <string name="barradatijuca"> BARRA DA TIJUCA</string>
     <string name="guaratiba"> GUARATIBA</string>
     <string name="copabacana"> COPACABANA</string>
+    <string name="roteiroCompleto"> PRECISO DO ROTEIRO COMPLETO</string>
+    <string name="precisoHotel"> PRECISO APENAS DE HOTEL</string>
+    <string name="precisoPasseio"> PRECISO APENAS DE PASSEIOS</string>
+    <string name="precisoGastronomia"> OPÇÕES GASTRONÔMICAS </string>
+    <string name="continuar">CONTINUAR</string>
+    <string name="todo">TODO</string>
 
 
 </resources>
