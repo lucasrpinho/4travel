@@ -42,6 +42,14 @@
     <string name="precisoGastronomia"> OPÇÕES GASTRONÔMICAS </string>
     <string name="continuar">CONTINUAR</string>
     <string name="todo">TODO</string>
+    <string name="hoteisRecreio">HOTEIS</string>
+    <string name="gastronomiaRecreio">GASTRONOMIA</string>
+    <string name="atlanticosul">ATLÂNTICO SUL</string>
+    <string name="cdesign">CDesign Hotel</string>
+    <string name="ramada">RAMADA</string>
+    <string name="descricaoAtlanticoSul">Hotel situado na Avenida Lúcio Costa, 18000. Próximo a praia.</string>
+    <string name="descricaocdesign">Hotel situado na Avenida Lúcio Costa, 17360. Próximo a praia.</string>
+    <string name="descricaoRamada">Hotel situado na Av. das Américas, 19.021. Próximo ao Recreio Shopping.</string>
 
 
 </resources>
