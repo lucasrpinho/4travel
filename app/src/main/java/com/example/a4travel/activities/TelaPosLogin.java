@@ -42,10 +42,10 @@ public class TelaPosLogin extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View view) {
-        switch ((view.getId())){
+    public void onClick(View v) {
+        switch ((v.getId())){
             case R.id.btnCriarRoteiro:
-                Intent i = new Intent(activity, Regioes.class);
+                Intent i = new Intent(this, Regioes.class);
                 startActivity(i);
                 break;
             case R.id.btnMostrarRoteiro:

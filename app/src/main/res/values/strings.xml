@@ -33,10 +33,10 @@
     <string name="edtID">ID que deseja deletar</string>
     <string name="btnVoltar">Voltar</string>
     <string name="error_força_senha">A senha deve conter 8 caracteres, ao menos uma letra maiúscula, um número e um caracter especial</string>
-    <string name="recreio"> Recreio</string>
-    <string name="barradatijuca"> Barra da Tijuca</string>
-    <string name="guaratiba"> Guaratiba</string>
-    <string name="copabacana"> Copacabana</string>
+    <string name="recreio"> RECREIO</string>
+    <string name="barradatijuca"> BARRA DA TIJUCA</string>
+    <string name="guaratiba"> GUARATIBA</string>
+    <string name="copabacana"> COPACABANA</string>
 
 
 </resources>

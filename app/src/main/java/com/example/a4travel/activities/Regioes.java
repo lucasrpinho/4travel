@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a4travel.R;
 
-public class Regioes extends AppCompatActivity implements View.OnClickListener {
-
+public class Regioes extends AppCompatActivity implements View.OnClickListener  {
+    private final AppCompatActivity activity = Regioes.this;
     private ImageButton btn_guaratiba, btn_recreio, btn_barradatijuca, btn_copacabana;
 
     @Override
@@ -18,8 +18,9 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.regioes);
         getSupportActionBar().hide();
 
-        initListeners();
+
         initViews();
+        initListeners();
     }
 
     private void initViews(){
@@ -30,11 +31,12 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener {
     }
 
     private void initListeners() {
-        btn_copacabana.setOnClickListener(this);
-        btn_guaratiba.setOnClickListener(this);
-        btn_barradatijuca.setOnClickListener(this);
         btn_recreio.setOnClickListener(this);
+        btn_barradatijuca.setOnClickListener(this);
+        btn_guaratiba.setOnClickListener(this);
+        btn_copacabana.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View view) {
