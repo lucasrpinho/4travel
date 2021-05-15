@@ -47,9 +47,22 @@
     <string name="atlanticosul">ATLÂNTICO SUL</string>
     <string name="cdesign">CDesign Hotel</string>
     <string name="ramada">RAMADA</string>
-    <string name="descricaoAtlanticoSul">Hotel situado na Avenida Lúcio Costa, 18000. Próximo a praia.</string>
-    <string name="descricaocdesign">Hotel situado na Avenida Lúcio Costa, 17360. Próximo a praia.</string>
-    <string name="descricaoRamada">Hotel situado na Av. das Américas, 19.021. Próximo ao Recreio Shopping.</string>
+    <string name="descricaoAtlanticoSul">Hotel situado na Avenida Lúcio Costa, 18000. Próximo a praia. R$ 275 diária.</string>
+    <string name="descricaocdesign">Hotel situado na Avenida Lúcio Costa, 17360. Próximo a praia. R$ 306 diária.</string>
+    <string name="descricaoRamada">Hotel situado na Av. das Américas, 19.021. Próximo ao Recreio Shopping. R$ 235 diária.</string>
+    <string name="descricaoNaBrasa">Choperia situada de frente para a praia que serve carnes seletas na brasa e galetos, entre guarnições e variedades.</string>
+    <string name="na_brasa_columbia">NA BRASA COLUMBIA</string>
+    <string name="riosul">RIO SUL</string>
+    <string name="descricaoRioSul">Rodízio de carnes com ampla variedade de carnes, buffet livre e comida japonesa em salão tradicional.</string>
+    <string name="bahamas">BAHAMAS STEAK HOUSE</string>
+    <string name="descricaobahamas">Churrascaria rústica com entradas, carnes, frutos do mar, chope e outras bebidas, além de mesas ao ar livre.</string>
+    <string name="kacua">KAÇUÁ BAR E RESTAURANTE</string>
+    <string name="descricaokacua">Pratos tradicionais de regiões da Bahia e de Sergipe em um cenário rústico com música e caipirinha.</string>
+    <string name="parme">PARMÊ</string>
+    <string name="descricaoparme">Rede de restaurantes famosa pelas pizzas e massas, tem amplo cardápio e clima alegre e familiar, com delivery.</string>
+    <string name="riozen">RIO ZEN SUSHI</string>
+    <string name="descricaoriozen">Menu variado com destaque para os pratos típicos da gastronomia japonesa, em ambiente tranquilo com varanda.</string>
+
 
 
 </resources>
