@@ -52,7 +52,18 @@
     <string name="descricaoRamada">Hotel situado na Av. das Américas, 19.021. Próximo ao Recreio Shopping. R$ 235 diária.</string>
     <string name="descricaoNaBrasa">Choperia situada de frente para a praia que serve carnes seletas na brasa e galetos, entre guarnições e variedades.</string>
     <string name="na_brasa_columbia">NA BRASA COLUMBIA</string>
+    <string name="passeiosRecreio">PASSEIOS</string>
+    <string name="americas">SHOPPING AMERICAS</string>
+    <string name="pedrapontal">PEDRA DO PONTAL</string>
+    <string name="praiaSecreto">PRAIA DO SECRETO</string>
+    <string name="descricaoPraiaSecreto">Uma caminhada por pedras íngremes leva a uma pitoresca praia com piscinas naturais propícias para nadar.</string>
+    <string name="descricaopedrapontal">Trilha localizada no posto 12 da praia do Recreio, conta com um lindo visual para tirar fotos e uma vista maravilhosa.</string>
+    <string name="descricaoamericas">Shopping moderno para comprar roupas e artigos domésticos, praça de alimentação, cinema e pista de gelo.</string>
+    <string name="reserva">RESERVA</string>
+    <string name="descricaoreserva">A Praia da Reserva, também conhecida como Praia da Reserva de Marapendi, é uma praia situada no bairro da Barra da Tijuca, na Zona Oeste da cidade do Rio de Janeiro. Com cerca de 8,0 km de extensão, localiza-se entre a Praia da Barra da Tijuca e a Praia do Recreio.</string>
     <string name="riosul">RIO SUL</string>
+    <string name="chicomendes">CHICO MENDES</string>
+    <string name="descricaochicomendes">O Parque Ecológico Chico Mendes, ou Parque Natural Municipal Chico Mendes, é uma unidade de conservação pública situada no Recreio dos Bandeirantes, na cidade do Rio de Janeiro, Brasil. Foi assim batizado em homenagem ao líder seringueiro assassinado no Acre, em 1988.</string>
     <string name="descricaoRioSul">Rodízio de carnes com ampla variedade de carnes, buffet livre e comida japonesa em salão tradicional.</string>
     <string name="bahamas">BAHAMAS STEAK HOUSE</string>
     <string name="descricaobahamas">Churrascaria rústica com entradas, carnes, frutos do mar, chope e outras bebidas, além de mesas ao ar livre.</string>
@@ -62,7 +73,6 @@
     <string name="descricaoparme">Rede de restaurantes famosa pelas pizzas e massas, tem amplo cardápio e clima alegre e familiar, com delivery.</string>
     <string name="riozen">RIO ZEN SUSHI</string>
     <string name="descricaoriozen">Menu variado com destaque para os pratos típicos da gastronomia japonesa, em ambiente tranquilo com varanda.</string>
-
 
 
 </resources>
