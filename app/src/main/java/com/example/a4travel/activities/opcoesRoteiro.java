@@ -1,5 +1,6 @@
 package com.example.a4travel.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ public class opcoesRoteiro extends AppCompatActivity implements View.OnClickList
     private final AppCompatActivity activity = opcoesRoteiro.this;
     private RadioButton roteiroCompleto, precisoHotel, precisoPasseio, precisoGastronomia;
     private Button btnContinuar;
+    private Regioes regioes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,25 @@ public class opcoesRoteiro extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.btnContinuar:
+               String regiao = getIntent().getStringExtra("REGIÃO");
+               if (regiao.equals("recreio")){
+                 if (precisoPasseio.isChecked()) {
+                    Intent passeio = new Intent(this, passeiosRecreio.class);
+                    startActivity(passeio);
+                }
+                 if (precisoGastronomia.isChecked()){
+                     Intent gastronomia = new Intent (this, gastronomiaRecreio.class);
+                     startActivity(gastronomia);
+                 }
+                 if (precisoHotel.isChecked() || roteiroCompleto.isChecked()){
+                     Intent hotel = new Intent(this, hoteisRecreio.class);
+                     startActivity(hotel);
+                 }
 
+            break;
+            }
+        }
     }
 }

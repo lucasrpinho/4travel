@@ -47,9 +47,9 @@
     <string name="atlanticosul">ATLÂNTICO SUL</string>
     <string name="cdesign">CDesign Hotel</string>
     <string name="ramada">RAMADA</string>
-    <string name="descricaoAtlanticoSul">Hotel situado na Avenida Lúcio Costa, 18000. Próximo a praia. R$ 275 diária.</string>
-    <string name="descricaocdesign">Hotel situado na Avenida Lúcio Costa, 17360. Próximo a praia. R$ 306 diária.</string>
-    <string name="descricaoRamada">Hotel situado na Av. das Américas, 19.021. Próximo ao Recreio Shopping. R$ 235 diária.</string>
+    <string name="descricaoAtlanticoSul">Hotel situado na Avenida Lúcio Costa, 18000. Próximo a praia. R$ 275 a diária.</string>
+    <string name="descricaocdesign">Hotel situado na Avenida Lúcio Costa, 17360. Próximo a praia. R$ 306 a diária.</string>
+    <string name="descricaoRamada">Hotel situado na Av. das Américas, 19.021. Próximo ao Recreio Shopping. R$ 235 a diária.</string>
     <string name="descricaoNaBrasa">Choperia situada de frente para a praia que serve carnes seletas na brasa e galetos, entre guarnições e variedades.</string>
     <string name="na_brasa_columbia">NA BRASA COLUMBIA</string>
     <string name="passeiosRecreio">PASSEIOS</string>
@@ -63,7 +63,7 @@
     <string name="descricaoreserva">A Praia da Reserva, também conhecida como Praia da Reserva de Marapendi, é uma praia situada no bairro da Barra da Tijuca, na Zona Oeste da cidade do Rio de Janeiro. Com cerca de 8,0 km de extensão, localiza-se entre a Praia da Barra da Tijuca e a Praia do Recreio.</string>
     <string name="riosul">RIO SUL</string>
     <string name="chicomendes">CHICO MENDES</string>
-    <string name="descricaochicomendes">O Parque Ecológico Chico Mendes, ou Parque Natural Municipal Chico Mendes, é uma unidade de conservação pública situada no Recreio dos Bandeirantes, na cidade do Rio de Janeiro, Brasil. Foi assim batizado em homenagem ao líder seringueiro assassinado no Acre, em 1988.</string>
+    <string name="descricaochicomendes">O Parque Ecológico Chico Mendes, ou Parque Natural Municipal Chico Mendes, é uma unidade de conservação pública situada no Recreio dos Bandeirantes, na cidade do Rio de Janeiro, Brasil.</string>
     <string name="descricaoRioSul">Rodízio de carnes com ampla variedade de carnes, buffet livre e comida japonesa em salão tradicional.</string>
     <string name="bahamas">BAHAMAS STEAK HOUSE</string>
     <string name="descricaobahamas">Churrascaria rústica com entradas, carnes, frutos do mar, chope e outras bebidas, além de mesas ao ar livre.</string>
@@ -73,6 +73,8 @@
     <string name="descricaoparme">Rede de restaurantes famosa pelas pizzas e massas, tem amplo cardápio e clima alegre e familiar, com delivery.</string>
     <string name="riozen">RIO ZEN SUSHI</string>
     <string name="descricaoriozen">Menu variado com destaque para os pratos típicos da gastronomia japonesa, em ambiente tranquilo com varanda.</string>
+    <string name="ksbeack">KS BEACH HOTEL</string>
+    <string name="descricaoksbeach">O KS Beach Hotel está localizado no Rio de Janeiro, a apenas 6 m da Praia do Recreio. O WiFi gratuito está disponível no local. Um café da manhã diário está incluído. R$ 305 a diária.</string>
 
 
 </resources>

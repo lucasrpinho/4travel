@@ -44,18 +44,22 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
         switch (view.getId()){
             case R.id.btn_barradatijuca:
                 Intent barra = new Intent(activity, opcoesRoteiro.class);
+                barra.putExtra("REGIÃO", "barra");
                 startActivity(barra);
                 break;
             case R.id.btn_copacabana:
                 Intent copa = new Intent (activity, opcoesRoteiro.class);
+                copa.putExtra("REGIÃO", "copa");
                 startActivity(copa);
                 break;
             case R.id.btn_recreio:
                 Intent recreio = new Intent(activity, opcoesRoteiro.class);
+                recreio.putExtra("REGIÃO", "recreio");
                 startActivity(recreio);
                 break;
             case R.id.btn_guaratiba:
                 Intent guaratiba = new Intent(activity, opcoesRoteiro.class);
+                guaratiba.putExtra("REGIÃO", "guaratiba");
                 startActivity(guaratiba);
                 break;
         }
