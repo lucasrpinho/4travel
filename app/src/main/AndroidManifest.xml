@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.4travel">
-        <activity android:name=".activities.passeiosRecreio"></activity>
+        <activity android:name=".adapters.RoteiroAdapter"></activity>
+        <activity android:name=".activities.passeiosRecreio" />
         <activity android:name=".activities.gastronomiaRecreio" />
         <activity android:name=".activities.hoteisRecreio" />
         <activity android:name=".activities.opcoesRoteiro" />

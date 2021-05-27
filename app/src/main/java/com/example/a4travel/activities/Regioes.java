@@ -4,14 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a4travel.R;
+import com.example.a4travel.SQL.DatabaseHelper;
+import com.example.a4travel.model.User;
+import com.example.a4travel.model.roteiro;
 
 public class Regioes extends AppCompatActivity implements View.OnClickListener  {
     private final AppCompatActivity activity = Regioes.this;
+    private DatabaseHelper databaseHelper;
+    private User user;
+    private com.example.a4travel.model.roteiro Roteiro;
     private ImageButton btn_guaratiba, btn_recreio, btn_barradatijuca, btn_copacabana;
+    private TextView copacabana, guaratiba, recreiodosbandeirantes, barradatijuca;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +30,7 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
 
         initViews();
         initListeners();
+        initObjects();
     }
 
     private void initViews(){
@@ -29,6 +38,10 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
         btn_guaratiba = (ImageButton) findViewById(R.id.btn_guaratiba);
         btn_recreio = (ImageButton) findViewById(R.id.btn_recreio);
         btn_copacabana = (ImageButton) findViewById(R.id.btn_copacabana);
+        copacabana = (TextView) findViewById(R.id.copacabana);
+        recreiodosbandeirantes = (TextView) findViewById(R.id.recreio);
+        barradatijuca = (TextView) findViewById(R.id.barradatijuca);
+        guaratiba = (TextView) findViewById(R.id.guaratiba);
     }
 
     private void initListeners() {
@@ -38,29 +51,47 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
         btn_copacabana.setOnClickListener(this);
     }
 
+    private void initObjects(){
+         databaseHelper = new DatabaseHelper(this);
+         Roteiro = new roteiro();
+         user = new User();
+
+    }
+
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_barradatijuca:
+
                 Intent barra = new Intent(activity, opcoesRoteiro.class);
+                user.setRegiao(barradatijuca.getText().toString().trim());
+                databaseHelper.addRegiao(user);
                 barra.putExtra("REGIÃO", "barra");
                 startActivity(barra);
                 break;
             case R.id.btn_copacabana:
                 Intent copa = new Intent (activity, opcoesRoteiro.class);
+                user.setRegiao(copacabana.getText().toString().trim());
+                databaseHelper.addRegiao(user);
                 copa.putExtra("REGIÃO", "copa");
                 startActivity(copa);
                 break;
             case R.id.btn_recreio:
-                Intent recreio = new Intent(activity, opcoesRoteiro.class);
-                recreio.putExtra("REGIÃO", "recreio");
-                startActivity(recreio);
+                Intent recreioTela = new Intent(activity, opcoesRoteiro.class);
+                user.setRegiao(recreiodosbandeirantes.getText().toString().trim());
+                databaseHelper.addRegiao(user);
+                recreioTela.putExtra("REGIÃO", "recreio");
+                String email = getIntent().getStringExtra("EMAIL");
+                recreioTela.putExtra("EMAIL", email);
+                startActivity(recreioTela);
                 break;
             case R.id.btn_guaratiba:
-                Intent guaratiba = new Intent(activity, opcoesRoteiro.class);
-                guaratiba.putExtra("REGIÃO", "guaratiba");
-                startActivity(guaratiba);
+                Intent guaratibaTela= new Intent(activity, opcoesRoteiro.class);
+                user.setRegiao(guaratiba.getText().toString().trim());
+                databaseHelper.addRegiao(user);
+                guaratibaTela.putExtra("REGIÃO", "guaratiba");
+                startActivity(guaratibaTela);
                 break;
         }
     }

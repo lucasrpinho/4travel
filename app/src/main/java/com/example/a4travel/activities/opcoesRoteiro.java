@@ -47,16 +47,33 @@ public class opcoesRoteiro extends AppCompatActivity implements View.OnClickList
                String regiao = getIntent().getStringExtra("REGIÃO");
                if (regiao.equals("recreio")){
                  if (precisoPasseio.isChecked()) {
-                    Intent passeio = new Intent(this, passeiosRecreio.class);
+                     Intent passeio = new Intent(this, passeiosRecreio.class);
+                     String email = getIntent().getStringExtra("EMAIL");
+                     passeio.putExtra("EMAIL", email);
+                     passeio.putExtra("OPÇÃO", "passeio");
                     startActivity(passeio);
                 }
                  if (precisoGastronomia.isChecked()){
                      Intent gastronomia = new Intent (this, gastronomiaRecreio.class);
+                     String email = getIntent().getStringExtra("EMAIL");
+                     gastronomia.putExtra("EMAIL", email);
+                     gastronomia.putExtra("OPÇÃO", "gastronomia");
                      startActivity(gastronomia);
                  }
-                 if (precisoHotel.isChecked() || roteiroCompleto.isChecked()){
+                 if (precisoHotel.isChecked()){
                      Intent hotel = new Intent(this, hoteisRecreio.class);
+                     String email = getIntent().getStringExtra("EMAIL");
+                     hotel.putExtra("EMAIL", email);
+                     hotel.putExtra("OPÇÃO", "hotel");
                      startActivity(hotel);
+                 }
+
+                 if (roteiroCompleto.isChecked()){
+                     Intent completo = new Intent(this, hoteisRecreio.class);
+                     String email = getIntent().getStringExtra("EMAIL");
+                     completo.putExtra("EMAIL", email);
+                     completo.putExtra("OPÇÃO", "completo");
+                     startActivity(completo);
                  }
 
             break;

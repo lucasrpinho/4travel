@@ -33,7 +33,7 @@
             android:contentDescription="@string/todo" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/praiasecreto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="145dp"
@@ -67,6 +67,7 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:id="@+id/pedrapontal"
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
@@ -98,6 +99,7 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:id="@+id/shoppingamericas"
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
@@ -130,6 +132,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/chicomendes"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
             android:text="@string/chicomendes"
@@ -162,6 +165,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
+            android:id="@+id/reserva"
             android:layout_marginTop="-133sp"
             android:text="@string/reserva"
             android:textColor="@color/black"

@@ -34,7 +34,7 @@
             android:contentDescription="@string/todo" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/nabrasa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="145dp"
@@ -68,6 +68,7 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:id="@+id/riosul"
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
@@ -100,6 +101,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/bahamas"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
             android:text="@string/bahamas"
@@ -134,6 +136,7 @@
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
             android:text="@string/kacua"
+            android:id="@+id/kacua"
             android:textColor="@color/black"
             android:textSize="22sp"/>
 
@@ -164,6 +167,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
+            android:id="@+id/parme"
             android:text="@string/parme"
             android:textColor="@color/black"
             android:textSize="22sp"/>
@@ -194,6 +198,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
+            android:id="@+id/riozen"
             android:layout_marginTop="-133sp"
             android:text="@string/riozen"
             android:textColor="@color/black"

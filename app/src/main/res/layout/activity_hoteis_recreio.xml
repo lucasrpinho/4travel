@@ -35,7 +35,7 @@
             android:contentDescription="@string/todo" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/ramada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="145dp"
@@ -69,6 +69,7 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:id="@+id/cdesign"
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
@@ -100,6 +101,7 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:id="@+id/atlanticosul"
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
@@ -132,6 +134,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/ksbeach"
             android:layout_marginStart="145sp"
             android:layout_marginTop="-133sp"
             android:text="@string/ksbeack"

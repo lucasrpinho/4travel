@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.a4travel.model.User;
+import com.example.a4travel.model.roteiro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,22 +16,33 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     // Database Name
     private static final String DATABASE_NAME = "ControleUsuario.bd";
     // User table name
     private static final String TABLE_USUARIO = "usuario";
+    private static final String TABLE_ROTEIRO = "roteiro";
     // User Table Columns names
     private static final String COLUMN_USUARIO_ID = "usuario_id";
     private static final String COLUMN_USUARIO_NOME = "usuario_nome";
     private static final String COLUMN_USUARIO_EMAIL = "usuario_email";
     private static final String COLUMN_USUARIO_SENHA = "usuario_senha";
+    private static final String COLUMN_ROTEIRO_REGIAO = "roteiro_regiao";
+    private static final String COLUMN_ROTEIRO_HOTEL = "roteiro_hotel";
+    private static final String COLUMN_ROTEIRO_ID = "roteiro_id";
+    private static final String COLUMN_ROTEIRO_GASTRONOMIA = "roteiro_gastronomia";
+    private static final String COLUMN_ROTEIRO_PASSEIO = "roteiro_passeio";
+
     private List<User> listUsers;
+    private List<roteiro> listRoteiro;
+
 
     // create table sql query
     private String CREATE_USUARIO_TABLE = "CREATE TABLE " + TABLE_USUARIO + "("
             + COLUMN_USUARIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_USUARIO_NOME + " TEXT,"
-            + COLUMN_USUARIO_EMAIL + " TEXT," + COLUMN_USUARIO_SENHA + " TEXT" + ")";
+            + COLUMN_USUARIO_EMAIL + " TEXT," + COLUMN_USUARIO_SENHA + " TEXT," + COLUMN_ROTEIRO_HOTEL + " TEXT,"
+            + COLUMN_ROTEIRO_GASTRONOMIA + " TEXT," + COLUMN_ROTEIRO_PASSEIO + " TEXT," + COLUMN_ROTEIRO_REGIAO + " TEXT" + ")";
+
 
     // drop table sql query
     private String DROP_USUARIO_TABLE = "DROP TABLE IF EXISTS " + TABLE_USUARIO;
@@ -51,10 +63,89 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
-        //Drop User Table if exist
         db.execSQL(DROP_USUARIO_TABLE);
         // Create tables again
         onCreate(db);
+    }
+
+    public String getGastronomia(int id) {
+        String gastronomia = "Não escolhido";
+        SQLiteDatabase db = this.getWritableDatabase();
+        String whereclause = "usuario_id=?";
+        String[] whereargs = new String[]{String.valueOf(id)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            gastronomia = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA));
+        }
+        return gastronomia;
+    }
+
+    public String getPasseio(int id) {
+        String passeio = "Não escolhido";
+        SQLiteDatabase db = this.getWritableDatabase();
+        String whereclause = "usuario_id=?";
+        String[] whereargs = new String[]{String.valueOf(id)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO));
+        }
+        return passeio;
+    }
+
+    public String getHotel(String email) {
+        String hotel = "Não escolhido";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String whereclause = "usuario_email=?";
+        String[] whereargs = new String[]{String.valueOf(email)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            hotel = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_HOTEL));
+        }
+        csr.close();
+        return hotel;
+    }
+
+    public void addHotel(User user) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_ROTEIRO_HOTEL, user.getHotel());
+        db.insert(TABLE_USUARIO, null, values);
+        db.close();
+    }
+
+    public void addGastronomia(User user){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA, user.getGastronomia());
+        db.insert(TABLE_USUARIO, null, values);
+        db.close();
+    }
+
+    public void addPasseio(User user){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_ROTEIRO_PASSEIO, user.getPasseio());
+        db.insert(TABLE_USUARIO, null, values);
+        db.close();
+    }
+
+    public void addRoteiro(User user) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA, user.getGastronomia());
+        values.put(COLUMN_ROTEIRO_PASSEIO, user.getPasseio());
+        values.put(COLUMN_ROTEIRO_HOTEL, user.getHotel());
+        values.put(COLUMN_ROTEIRO_REGIAO, user.getRegiao());
+        db.insert(TABLE_USUARIO, null, values);
+        db.close();
+    }
+
+    public void addRegiao(User user){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_ROTEIRO_REGIAO, user.getRegiao());
+        db.insert(TABLE_USUARIO, null, values);
+        db.close();
     }
 
     /**
@@ -62,6 +153,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      *
      * @param user
      */
+
     public void addUser(User user) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -71,6 +163,42 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Inserting Row
         db.insert(TABLE_USUARIO, null, values);
         db.close();
+    }
+
+    public List<User> getAllRoteiro() {
+        // array of columns to fetch
+        String[] columns = {
+                COLUMN_ROTEIRO_REGIAO,
+                COLUMN_ROTEIRO_PASSEIO,
+                COLUMN_ROTEIRO_GASTRONOMIA,
+                COLUMN_ROTEIRO_HOTEL
+        };
+        String sortOrder =
+                COLUMN_ROTEIRO_ID + " ASC";
+        List<User> roteiroList = new ArrayList<User>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.query(TABLE_USUARIO, //Table to query
+                columns,    //columns to return
+                null,        //columns for the WHERE clause
+                null,        //The values for the WHERE clause
+                null,       //group the rows
+                null,       //filter by row groups
+                sortOrder); //The sort order
+        if (cursor.moveToFirst()) {
+            do {
+                User user = new User();
+                user.setIdRoteiro(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_ID))));
+                user.setHotel(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_HOTEL)));
+                user.setGastronomia(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA)));
+                user.setPasseio(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_PASSEIO)));
+                user.setRegiao(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_REGIAO)));
+                roteiroList.add(user);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        // return roteiro list
+        return roteiroList;
     }
 
     /**

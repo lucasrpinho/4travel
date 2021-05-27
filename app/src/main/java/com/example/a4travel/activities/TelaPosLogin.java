@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.a4travel.R;
 import com.example.a4travel.SQL.DatabaseHelper;
+import com.example.a4travel.adapters.RoteiroAdapter;
 
 public class TelaPosLogin extends AppCompatActivity implements View.OnClickListener {
 
@@ -46,9 +47,15 @@ public class TelaPosLogin extends AppCompatActivity implements View.OnClickListe
         switch ((v.getId())){
             case R.id.btnCriarRoteiro:
                 Intent i = new Intent(this, Regioes.class);
+                String email = getIntent().getStringExtra("EMAIL");
+                i.putExtra("EMAIL", email);
                 startActivity(i);
                 break;
             case R.id.btnMostrarRoteiro:
+                Intent roteiro = new Intent (this, RoteiroAdapter.class);
+                email = getIntent().getStringExtra("EMAIL");
+                roteiro.putExtra("EMAIL", email);
+                startActivity(roteiro);
                 break;
         }
     }

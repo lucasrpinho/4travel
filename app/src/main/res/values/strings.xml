@@ -73,6 +73,13 @@
     <string name="descricaoparme">Rede de restaurantes famosa pelas pizzas e massas, tem amplo cardápio e clima alegre e familiar, com delivery.</string>
     <string name="riozen">RIO ZEN SUSHI</string>
     <string name="descricaoriozen">Menu variado com destaque para os pratos típicos da gastronomia japonesa, em ambiente tranquilo com varanda.</string>
+    <string name="gastronomia">GASTRONOMIA </string>
+    <string name="txtGastronomia">gastronomia </string>
+    <string name="txtHotel">hotel</string>
+    <string name="txtPasseio">passeio</string>
+    <string name="hotel">HOTEL </string>
+    <string name="roteiro"> SEU ROTEIRO</string>
+    <string name="passeio">PASSEIO </string>
     <string name="ksbeack">KS BEACH HOTEL</string>
     <string name="descricaoksbeach">O KS Beach Hotel está localizado no Rio de Janeiro, a apenas 6 m da Praia do Recreio. O WiFi gratuito está disponível no local. Um café da manhã diário está incluído. R$ 305 a diária.</string>
 
