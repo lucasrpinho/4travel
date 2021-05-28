@@ -16,7 +16,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 6;
     // Database Name
     private static final String DATABASE_NAME = "ControleUsuario.bd";
     // User table name
@@ -40,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // create table sql query
     private String CREATE_USUARIO_TABLE = "CREATE TABLE " + TABLE_USUARIO + "("
             + COLUMN_USUARIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_USUARIO_NOME + " TEXT,"
-            + COLUMN_USUARIO_EMAIL + " TEXT," + COLUMN_USUARIO_SENHA + " TEXT," + COLUMN_ROTEIRO_HOTEL + " TEXT,"
+            + COLUMN_USUARIO_EMAIL + " TEXT," + COLUMN_USUARIO_SENHA + " TEXT," + DatabaseHelper.COLUMN_ROTEIRO_HOTEL + " TEXT,"
             + COLUMN_ROTEIRO_GASTRONOMIA + " TEXT," + COLUMN_ROTEIRO_PASSEIO + " TEXT," + COLUMN_ROTEIRO_REGIAO + " TEXT" + ")";
 
 
@@ -68,11 +68,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public String getGastronomia(int id) {
+    public String getGastronomia(String email) {
         String gastronomia = "Não escolhido";
         SQLiteDatabase db = this.getWritableDatabase();
-        String whereclause = "usuario_id=?";
-        String[] whereargs = new String[]{String.valueOf(id)};
+        String whereclause = "usuario_email= ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
         Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
         if (csr.moveToFirst()){
             gastronomia = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA));
@@ -80,11 +80,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return gastronomia;
     }
 
-    public String getPasseio(int id) {
+    public String getPasseio(String email) {
         String passeio = "Não escolhido";
         SQLiteDatabase db = this.getWritableDatabase();
-        String whereclause = "usuario_id=?";
-        String[] whereargs = new String[]{String.valueOf(id)};
+        String whereclause = "usuario_email= ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
         Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
         if (csr.moveToFirst()){
             passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO));
@@ -93,59 +93,55 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public String getHotel(String email) {
-        String hotel = "Não escolhido";
         SQLiteDatabase db = this.getReadableDatabase();
-        String whereclause = "usuario_email=?";
+        String hotel = "Não escolhido";
+        String[] projection = {
+                DatabaseHelper.COLUMN_ROTEIRO_HOTEL
+        };
+        String whereclause = COLUMN_USUARIO_EMAIL + " = ?";
         String[] whereargs = new String[]{String.valueOf(email)};
-        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        Cursor csr = db.query(TABLE_USUARIO, projection, whereclause, whereargs, null, null, null);
         if (csr.moveToFirst()){
-            hotel = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_HOTEL));
+            hotel = csr.getString(csr.getColumnIndex(DatabaseHelper.COLUMN_ROTEIRO_HOTEL));
         }
         csr.close();
         return hotel;
     }
 
-    public void addHotel(User user) {
+    public Boolean addHotel(String email ,String hotel) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_ROTEIRO_HOTEL, user.getHotel());
-        db.insert(TABLE_USUARIO, null, values);
-        db.close();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_HOTEL, hotel);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
     }
 
-    public void addGastronomia(User user){
+    public Boolean addGastronomia(String email ,String gastronomia){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_ROTEIRO_GASTRONOMIA, user.getGastronomia());
-        db.insert(TABLE_USUARIO, null, values);
-        db.close();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_GASTRONOMIA, gastronomia);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
     }
 
-    public void addPasseio(User user){
+    public Boolean addPasseio(String email, String passeio){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_ROTEIRO_PASSEIO, user.getPasseio());
-        db.insert(TABLE_USUARIO, null, values);
-        db.close();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_PASSEIO, passeio);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
     }
 
-    public void addRoteiro(User user) {
+    public Boolean addRegiao(String email, String regiao){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(COLUMN_ROTEIRO_GASTRONOMIA, user.getGastronomia());
-        values.put(COLUMN_ROTEIRO_PASSEIO, user.getPasseio());
-        values.put(COLUMN_ROTEIRO_HOTEL, user.getHotel());
-        values.put(COLUMN_ROTEIRO_REGIAO, user.getRegiao());
-        db.insert(TABLE_USUARIO, null, values);
-        db.close();
-    }
-
-    public void addRegiao(User user){
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_ROTEIRO_REGIAO, user.getRegiao());
-        db.insert(TABLE_USUARIO, null, values);
-        db.close();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_REGIAO, regiao);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
     }
 
     /**
@@ -160,6 +156,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USUARIO_NOME, user.getNome());
         values.put(COLUMN_USUARIO_EMAIL, user.getEmail());
         values.put(COLUMN_USUARIO_SENHA, user.getSenha());
+        values.put(COLUMN_ROTEIRO_HOTEL, user.getHotel());
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA, user.getGastronomia());
+        values.put(COLUMN_ROTEIRO_PASSEIO, user.getPasseio());
+        values.put(COLUMN_ROTEIRO_REGIAO, user.getRegiao());
         // Inserting Row
         db.insert(TABLE_USUARIO, null, values);
         db.close();
@@ -212,7 +212,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_USUARIO_ID,
                 COLUMN_USUARIO_EMAIL,
                 COLUMN_USUARIO_NOME,
-                COLUMN_USUARIO_SENHA
+                COLUMN_USUARIO_SENHA,
+                COLUMN_ROTEIRO_HOTEL,
+                COLUMN_ROTEIRO_GASTRONOMIA,
+                COLUMN_ROTEIRO_PASSEIO
         };
         // sorting orders
         String sortOrder =
@@ -240,6 +243,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 user.setNome(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_NOME)));
                 user.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_EMAIL)));
                 user.setSenha(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_SENHA)));
+                user.setHotel(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_HOTEL)));
+                user.setGastronomia(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA)));
+                user.setPasseio(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_PASSEIO)));
                 // Adding user record to list
                 userList.add(user);
             } while (cursor.moveToNext());

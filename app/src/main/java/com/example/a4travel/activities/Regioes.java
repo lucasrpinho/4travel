@@ -65,31 +65,34 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
             case R.id.btn_barradatijuca:
 
                 Intent barra = new Intent(activity, opcoesRoteiro.class);
-                user.setRegiao(barradatijuca.getText().toString().trim());
-                databaseHelper.addRegiao(user);
+                String regiao = barradatijuca.getText().toString().trim();
+                String email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addRegiao(email, regiao);
                 barra.putExtra("REGIÃO", "barra");
                 startActivity(barra);
                 break;
             case R.id.btn_copacabana:
                 Intent copa = new Intent (activity, opcoesRoteiro.class);
-                user.setRegiao(copacabana.getText().toString().trim());
-                databaseHelper.addRegiao(user);
+                regiao = copacabana.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addRegiao(email, regiao);
                 copa.putExtra("REGIÃO", "copa");
                 startActivity(copa);
                 break;
             case R.id.btn_recreio:
                 Intent recreioTela = new Intent(activity, opcoesRoteiro.class);
-                user.setRegiao(recreiodosbandeirantes.getText().toString().trim());
-                databaseHelper.addRegiao(user);
+                regiao = recreiodosbandeirantes.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addRegiao(email, regiao);
                 recreioTela.putExtra("REGIÃO", "recreio");
-                String email = getIntent().getStringExtra("EMAIL");
                 recreioTela.putExtra("EMAIL", email);
                 startActivity(recreioTela);
                 break;
             case R.id.btn_guaratiba:
                 Intent guaratibaTela= new Intent(activity, opcoesRoteiro.class);
-                user.setRegiao(guaratiba.getText().toString().trim());
-                databaseHelper.addRegiao(user);
+                regiao = guaratiba.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addRegiao(email, regiao);
                 guaratibaTela.putExtra("REGIÃO", "guaratiba");
                 startActivity(guaratibaTela);
                 break;

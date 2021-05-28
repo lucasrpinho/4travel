@@ -21,7 +21,6 @@ public class RoteiroAdapter extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roteiro_adapter);
-        getSupportActionBar().hide();
         initViews();
         initObjects();
         String email = getIntent().getStringExtra("EMAIL");
@@ -33,9 +32,9 @@ public class RoteiroAdapter extends AppCompatActivity {
         String email = getIntent().getStringExtra("EMAIL");
         String hotel = databaseHelper.getHotel(email);
         txtHotel.setText(hotel);
-        String gastronomia = databaseHelper.getGastronomia(user.getIdRoteiro());
+        String gastronomia = databaseHelper.getGastronomia(email);
         txtGastronomia.setText(gastronomia);
-        String passeio = databaseHelper.getPasseio(user.getIdRoteiro());
+        String passeio = databaseHelper.getPasseio(email);
         txtPasseio.setText(passeio);
     }
 

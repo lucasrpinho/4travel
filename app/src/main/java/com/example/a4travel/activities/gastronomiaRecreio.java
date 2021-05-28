@@ -65,12 +65,12 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
         String opcao = getIntent().getStringExtra("OPÇÃO");
         switch (view.getId()){
             case R.id.btnBahamas:
-                user.setGastronomia(bahamas.getText().toString().trim());
-                databaseHelper.addGastronomia(user);
+                String gastronomia = bahamas.getText().toString().trim();
+                String email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addGastronomia(email, gastronomia);
 
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     passeio.putExtra("EMAIL", email);
                     passeio.putExtra("OPÇÃO", opcao);
                     startActivity(passeio);
@@ -78,18 +78,17 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
                 }
                 if (opcao.equals("gastronomia")) {
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
                 }
             case R.id.btnRiosul:
-                user.setGastronomia(riosul.getText().toString().trim());
-                databaseHelper.addGastronomia(user);
+                gastronomia = riosul.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addGastronomia(email, gastronomia);
 
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     passeio.putExtra("EMAIL", email);
                     passeio.putExtra("OPÇÃO", opcao);
                     startActivity(passeio);
@@ -97,18 +96,17 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
                 }
                 if (opcao.equals("gastronomia")) {
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
                 }
             case R.id.btnRiozen:
-                user.setGastronomia(riozen.getText().toString().trim());
-                databaseHelper.addGastronomia(user);
+                gastronomia = riozen.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addGastronomia(email, gastronomia);
 
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     passeio.putExtra("EMAIL", email);
                     passeio.putExtra("OPÇÃO", opcao);
                     startActivity(passeio);
@@ -116,18 +114,17 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
                 }
                 if (opcao.equals("gastronomia")) {
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
                 }
             case R.id.btnParme:
-                user.setGastronomia(parme.getText().toString().trim());
-                databaseHelper.addGastronomia(user);
+                gastronomia = parme.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addGastronomia(email, gastronomia);
 
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     passeio.putExtra("EMAIL", email);
                     passeio.putExtra("OPÇÃO", opcao);
                     startActivity(passeio);
@@ -135,19 +132,18 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
                 }
                 if (opcao.equals("gastronomia")) {
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
                 }
 
             case R.id.btnNaBrasa:
-                user.setGastronomia(nabrasa.getText().toString().trim());
-                databaseHelper.addGastronomia(user);
+                gastronomia = nabrasa.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addGastronomia(email, gastronomia);
 
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     passeio.putExtra("EMAIL", email);
                     passeio.putExtra("OPÇÃO", opcao);
                     startActivity(passeio);
@@ -155,18 +151,17 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
                 }
                 if (opcao.equals("gastronomia")) {
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
                 }
             case R.id.btnKacua:
-                user.setGastronomia(kacua.getText().toString().trim());
-                databaseHelper.addGastronomia(user);
+                gastronomia = kacua.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addGastronomia(email, gastronomia);
 
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     passeio.putExtra("EMAIL", email);
                     passeio.putExtra("OPÇÃO", opcao);
                     startActivity(passeio);
@@ -174,7 +169,6 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
                 }
                 if (opcao.equals("gastronomia")) {
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;

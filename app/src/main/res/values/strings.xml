@@ -45,7 +45,7 @@
     <string name="hoteisRecreio">HOTEIS</string>
     <string name="gastronomiaRecreio">GASTRONOMIA</string>
     <string name="atlanticosul">ATLÂNTICO SUL</string>
-    <string name="cdesign">CDesign Hotel</string>
+    <string name="cdesign">CDESIGN HOTEL</string>
     <string name="ramada">RAMADA</string>
     <string name="descricaoAtlanticoSul">Hotel situado na Avenida Lúcio Costa, 18000. Próximo a praia. R$ 275 a diária.</string>
     <string name="descricaocdesign">Hotel situado na Avenida Lúcio Costa, 17360. Próximo a praia. R$ 306 a diária.</string>
@@ -74,9 +74,9 @@
     <string name="riozen">RIO ZEN SUSHI</string>
     <string name="descricaoriozen">Menu variado com destaque para os pratos típicos da gastronomia japonesa, em ambiente tranquilo com varanda.</string>
     <string name="gastronomia">GASTRONOMIA </string>
-    <string name="txtGastronomia">gastronomia </string>
-    <string name="txtHotel">hotel</string>
-    <string name="txtPasseio">passeio</string>
+    <string name="txtGastronomia">Gastronomia </string>
+    <string name="txtHotel">Hotel</string>
+    <string name="txtPasseio">Passeio</string>
     <string name="hotel">HOTEL </string>
     <string name="roteiro"> SEU ROTEIRO</string>
     <string name="passeio">PASSEIO </string>

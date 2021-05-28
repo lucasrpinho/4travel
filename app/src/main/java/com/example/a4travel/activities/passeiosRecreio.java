@@ -64,36 +64,36 @@ public class passeiosRecreio extends AppCompatActivity implements View.OnClickLi
         String email = getIntent().getStringExtra("EMAIL");
         switch (view.getId()){
             case R.id.btnAmericas:
-                user.setPasseio(shoppingamericas.getText().toString().trim());
-                databaseHelper.addPasseio(user);
+                String passeio = shoppingamericas.getText().toString().trim();
+                databaseHelper.addPasseio(email, passeio);
                 Intent roteiro = new Intent(this, RoteiroAdapter.class);
                 roteiro.putExtra("EMAIL", email);
                 startActivity(roteiro);
                 break;
             case R.id.btnReserva:
-                user.setPasseio(reserva.getText().toString().trim());
-                databaseHelper.addPasseio(user);
+                passeio = reserva.getText().toString().trim();
+                databaseHelper.addPasseio(email, passeio);
                 Intent roteiro2 = new Intent(this, RoteiroAdapter.class);
                 roteiro2.putExtra("EMAIL", email);
                 startActivity(roteiro2);
                 break;
             case R.id.btnChicoMendes:
-                user.setPasseio(chicomendes.getText().toString().trim());
-                databaseHelper.addPasseio(user);
+                passeio = chicomendes.getText().toString().trim();
+                databaseHelper.addPasseio(email, passeio);
                 Intent roteiro3 = new Intent(this, RoteiroAdapter.class);
                 roteiro3.putExtra("EMAIL", email);
                 startActivity(roteiro3);
                 break;
             case R.id.btnPraiaSecreto:
-                user.setPasseio(praiasecreto.getText().toString().trim());
-                databaseHelper.addPasseio(user);
+                passeio = praiasecreto.getText().toString().trim();
+                databaseHelper.addPasseio(email, passeio);
                 Intent roteiro4 = new Intent(this, RoteiroAdapter.class);
                 roteiro4.putExtra("EMAIL", email);
                 startActivity(roteiro4);
                 break;
             case R.id.btnPedraPontal:
-                user.setPasseio(pedrapontal.getText().toString().trim());
-                databaseHelper.addPasseio(user);
+                passeio = pedrapontal.getText().toString().trim();
+                databaseHelper.addPasseio(email, passeio);
                 Intent roteiro5 = new Intent(this, RoteiroAdapter.class);
                 roteiro5.putExtra("EMAIL", email);
                 startActivity(roteiro5);

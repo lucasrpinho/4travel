@@ -1,6 +1,7 @@
 package com.example.a4travel.activities;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -22,6 +23,7 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
     private DatabaseHelper databaseHelper;
     private roteiro Roteiro;
     private User user;
+    private SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +48,10 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
     }
 
     private void initObjects(){
-        databaseHelper = new DatabaseHelper(activity);
+        databaseHelper = new DatabaseHelper(this);
+        database = databaseHelper.getWritableDatabase();
         user = new User();
+
     }
 
     private void initListeners() {
@@ -62,10 +66,12 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
         switch (view.getId()){
             case R.id.btnRamada:
                 String opcao = getIntent().getStringExtra("OPÇÃO");
+                String hotel = ramada.getText().toString().trim();
+                String email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addHotel(email, hotel);
 
                 if (opcao.equals("completo")){
                     Intent gastronomia = new Intent(this, gastronomiaRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     gastronomia.putExtra("EMAIL", email);
                     gastronomia.putExtra("OPÇÃO", "completo");
                     startActivity(gastronomia);
@@ -73,23 +79,19 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
                 }
                 if (opcao.equals("hotel")){
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
-                    user.setHotel(ramada.getText().toString());
-                    databaseHelper.addHotel(user);
                     startActivity(roteiro);
                     break;
                 }
 
             case R.id.btnAtlantico:
                 opcao = getIntent().getStringExtra("OPÇÃO");
-                user.setHotel(atlanticosul.getText().toString().trim());
-
-                databaseHelper.addRoteiro(user);
+                hotel = atlanticosul.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addHotel(email ,hotel);
 
                 if (opcao.equals("completo")){
                     Intent gastronomia = new Intent(this, gastronomiaRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     gastronomia.putExtra("EMAIL", email);
                     gastronomia.putExtra("OPÇÃO", "completo");
                     startActivity(gastronomia);
@@ -97,7 +99,6 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
                 }
                 if (opcao.equals("hotel")){
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
@@ -105,13 +106,13 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
 
             case R.id.btnCDesign:
                 opcao = getIntent().getStringExtra("OPÇÃO");
-                user.setHotel(cdesign.getText().toString().trim());
-
-                databaseHelper.addRoteiro(user);
+                hotel = cdesign.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addHotel(email ,hotel);
 
                 if (opcao.equals("completo")){
                     Intent gastronomia = new Intent(this, gastronomiaRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
+                    email = getIntent().getStringExtra("EMAIL");
                     gastronomia.putExtra("EMAIL", email);
                     gastronomia.putExtra("OPÇÃO", "completo");
                     startActivity(gastronomia);
@@ -119,7 +120,7 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
                 }
                 if (opcao.equals("hotel")){
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
+                    email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
@@ -127,12 +128,11 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
 
             case R.id.btnKsbeach:
                 opcao = getIntent().getStringExtra("OPÇÃO");
-                user.setHotel(ksbeach.getText().toString().trim());
-
-                databaseHelper.addRoteiro(user);
+                hotel = ksbeach.getText().toString().trim();
+                email = getIntent().getStringExtra("EMAIL");
+                databaseHelper.addHotel(email ,hotel);
                 if (opcao.equals("completo")){
                     Intent gastronomia = new Intent(this, gastronomiaRecreio.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     gastronomia.putExtra("OPÇÃO", "completo");
                     gastronomia.putExtra("EMAIL", email);
                     startActivity(gastronomia);
@@ -140,7 +140,6 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
                 }
                 if (opcao.equals("hotel")){
                     Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    String email = getIntent().getStringExtra("EMAIL");
                     roteiro.putExtra("EMAIL", email);
                     startActivity(roteiro);
                     break;
