@@ -13,7 +13,6 @@ import com.example.a4travel.R;
 import com.example.a4travel.SQL.DatabaseHelper;
 import com.example.a4travel.adapters.RoteiroAdapter;
 import com.example.a4travel.model.User;
-import com.example.a4travel.model.roteiro;
 
 public class hoteisRecreio extends AppCompatActivity implements View.OnClickListener {
 
@@ -21,7 +20,6 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
     private TextView ramada, cdesign, ksbeach, atlanticosul;
     private final AppCompatActivity activity = hoteisRecreio.this;
     private DatabaseHelper databaseHelper;
-    private roteiro Roteiro;
     private User user;
     private SQLiteDatabase database;
 

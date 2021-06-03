@@ -11,7 +11,7 @@ import com.example.a4travel.model.User;
 
 public class RoteiroAdapter extends AppCompatActivity {
 
-    private TextView txtHotel, txtGastronomia, txtPasseio, nomeRoteiro;
+    private TextView txtHotel, txtGastronomia, txtPasseio, nomeRoteiro, txtRegião;
     private DatabaseHelper databaseHelper;
     private User user;
     private AppCompatActivity activity = RoteiroAdapter.this;
@@ -36,6 +36,8 @@ public class RoteiroAdapter extends AppCompatActivity {
         txtGastronomia.setText(gastronomia);
         String passeio = databaseHelper.getPasseio(email);
         txtPasseio.setText(passeio);
+        String regiao = databaseHelper.getRegiao(email);
+        txtRegião.setText(regiao);
     }
 
     private void initViews(){
@@ -43,6 +45,7 @@ public class RoteiroAdapter extends AppCompatActivity {
         txtHotel = (TextView) findViewById(R.id.txtHotel);
         txtPasseio = (TextView) findViewById(R.id.txtPasseio);
         nomeRoteiro = (TextView) findViewById(R.id.nomeRoteiro);
+        txtRegião = (TextView) findViewById(R.id.txtRegião);
     }
 
     private void initObjects(){

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.gastronomiaRecreio"
-    android:background="@drawable/gastronomia"
+    android:background="@drawable/travelbackgroundpng2"
     android:fillViewport="true">
 
     <LinearLayout

@@ -11,13 +11,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.a4travel.R;
 import com.example.a4travel.SQL.DatabaseHelper;
 import com.example.a4travel.model.User;
-import com.example.a4travel.model.roteiro;
 
 public class Regioes extends AppCompatActivity implements View.OnClickListener  {
     private final AppCompatActivity activity = Regioes.this;
     private DatabaseHelper databaseHelper;
     private User user;
-    private com.example.a4travel.model.roteiro Roteiro;
     private ImageButton btn_guaratiba, btn_recreio, btn_barradatijuca, btn_copacabana;
     private TextView copacabana, guaratiba, recreiodosbandeirantes, barradatijuca;
 
@@ -53,9 +51,7 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
 
     private void initObjects(){
          databaseHelper = new DatabaseHelper(this);
-         Roteiro = new roteiro();
          user = new User();
-
     }
 
 

@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,6 +40,7 @@ public class UsersListActivity extends AppCompatActivity implements View.OnClick
         initViews();
         initObjects();
         initListeners();
+        recyclerViewUsers.addItemDecoration(new DividerItemDecoration(recyclerViewUsers.getContext(), DividerItemDecoration.HORIZONTAL));
     }
     /**
      * This method is to initialize views

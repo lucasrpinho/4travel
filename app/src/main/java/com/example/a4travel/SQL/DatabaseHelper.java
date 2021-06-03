@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.a4travel.model.User;
-import com.example.a4travel.model.roteiro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,9 +31,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_ROTEIRO_ID = "roteiro_id";
     private static final String COLUMN_ROTEIRO_GASTRONOMIA = "roteiro_gastronomia";
     private static final String COLUMN_ROTEIRO_PASSEIO = "roteiro_passeio";
-
     private List<User> listUsers;
-    private List<roteiro> listRoteiro;
+
 
 
     // create table sql query
@@ -70,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public String getGastronomia(String email) {
         String gastronomia = "Não escolhido";
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         String whereclause = "usuario_email= ?";
         String[] whereargs = new String[]{String.valueOf(email)};
         Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
@@ -82,7 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public String getPasseio(String email) {
         String passeio = "Não escolhido";
-        SQLiteDatabase db = this.getWritableDatabase();
+        SQLiteDatabase db = this.getReadableDatabase();
         String whereclause = "usuario_email= ?";
         String[] whereargs = new String[]{String.valueOf(email)};
         Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
@@ -106,6 +104,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         csr.close();
         return hotel;
+    }
+
+    public String getRegiao(String email) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String regiao = "Não escolhido";
+        String[] projection = {
+                DatabaseHelper.COLUMN_ROTEIRO_REGIAO
+        };
+        String whereclause = COLUMN_USUARIO_EMAIL + " = ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
+        Cursor csr = db.query(TABLE_USUARIO, projection, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            regiao = csr.getString(csr.getColumnIndex(DatabaseHelper.COLUMN_ROTEIRO_REGIAO));
+        }
+        csr.close();
+        return regiao;
     }
 
     public Boolean addHotel(String email ,String hotel) {

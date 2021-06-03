@@ -35,6 +35,9 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         holder.txtNome.setText(listUsers.get(position).getNome());
         holder.txtEmail.setText(listUsers.get(position).getEmail());
         holder.txtSenha.setText(listUsers.get(position).getSenha());
+        holder.hotelLista.setText(listUsers.get(position).getHotel());
+        holder.gastronomiaLista.setText(listUsers.get(position).getGastronomia());
+        holder.passeioLista.setText(listUsers.get(position).getPasseio());
         databaseHelper = new DatabaseHelper(null);
         user = new User();
 
