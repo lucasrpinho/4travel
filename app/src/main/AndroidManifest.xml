@@ -10,7 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.4travel">
-        <activity android:name=".adapters.RoteiroAdapter"></activity>
+        <activity android:name=".activities.passeiosBarra"></activity>
+        <activity android:name=".activities.gastronomiaBarra" />
+        <activity android:name=".activities.hoteisBarra" />
+        <activity android:name=".activities.passeiosCopa" />
+        <activity android:name=".activities.gastronomiaCopa" />
+        <activity android:name=".activities.hoteisCopacabana" />
+        <activity android:name=".adapters.RoteiroAdapter" />
         <activity android:name=".activities.passeiosRecreio" />
         <activity android:name=".activities.gastronomiaRecreio" />
         <activity android:name=".activities.hoteisRecreio" />

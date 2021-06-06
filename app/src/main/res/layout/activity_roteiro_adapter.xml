@@ -77,6 +77,10 @@
                 android:textSize="24sp"
                 android:textColor="@color/black" />
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -104,6 +108,10 @@
                 android:textSize="24sp"
                 android:textColor="@color/black" />
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,9 +137,12 @@
                 android:textAlignment="center"
                 android:layout_weight="1"
                 android:textSize="24sp"
-                android:text="@string/txtGastronomia"
                 android:textColor="@color/black" />
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -155,9 +166,32 @@
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:textSize="24sp"
-                android:text="@string/txtPasseio"
                 android:textColor="@color/black" />
         </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRefazer"
+            android:text="REFAZER ROTEIRO"
+            android:backgroundTint="#174280"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLimpar"
+            android:text="LIMPAR ROTEIRO"
+            android:backgroundTint="#174280"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+        </Button>
 
 
     </LinearLayout>

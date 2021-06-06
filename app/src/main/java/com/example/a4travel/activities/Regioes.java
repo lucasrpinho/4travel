@@ -59,12 +59,12 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btn_barradatijuca:
-
                 Intent barra = new Intent(activity, opcoesRoteiro.class);
                 String regiao = barradatijuca.getText().toString().trim();
                 String email = getIntent().getStringExtra("EMAIL");
                 databaseHelper.addRegiao(email, regiao);
                 barra.putExtra("REGIÃO", "barra");
+                barra.putExtra("EMAIL", email);
                 startActivity(barra);
                 break;
             case R.id.btn_copacabana:
@@ -72,7 +72,8 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
                 regiao = copacabana.getText().toString().trim();
                 email = getIntent().getStringExtra("EMAIL");
                 databaseHelper.addRegiao(email, regiao);
-                copa.putExtra("REGIÃO", "copa");
+                copa.putExtra("REGIÃO", "copacabana");
+                copa.putExtra("EMAIL", email);
                 startActivity(copa);
                 break;
             case R.id.btn_recreio:
@@ -90,6 +91,7 @@ public class Regioes extends AppCompatActivity implements View.OnClickListener  
                 email = getIntent().getStringExtra("EMAIL");
                 databaseHelper.addRegiao(email, regiao);
                 guaratibaTela.putExtra("REGIÃO", "guaratiba");
+                guaratibaTela.putExtra("EMAIL", email);
                 startActivity(guaratibaTela);
                 break;
         }

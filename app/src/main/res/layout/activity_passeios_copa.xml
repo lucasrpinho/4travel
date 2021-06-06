@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.passeiosCopa"
+    android:background="@drawable/travelbackgroundpng2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/passeiosRecreio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/passeiosRecreio"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/carlosdrummond"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/carlos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="-133dp"
+            android:text="@string/carlos"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:textColor="@color/black"
+            android:text="@string/carlosdescricao" />
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnCarlos"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="60sp"
+            android:background="@drawable/calcadao"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/calcadao"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/calçadao"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/calçadaodescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnCalcadao"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="60sp"
+            android:background="@drawable/chacrinha"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/chacrinha"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/chacrinha"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/chacrinhadescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnChacrinha"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="60sp"
+            android:background="@drawable/museuforte"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/museuforte"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/museudoforte"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/museudofortedescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnMuseudoForte"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+    </LinearLayout>
+
+</ScrollView>

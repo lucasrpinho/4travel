@@ -1,7 +1,6 @@
 package com.example.a4travel.activities;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.a4travel.R;
 import com.example.a4travel.SQL.DatabaseHelper;
 import com.example.a4travel.adapters.RoteiroAdapter;
-import com.example.a4travel.model.User;
 
 public class hoteisRecreio extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,8 +18,6 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
     private TextView ramada, cdesign, ksbeach, atlanticosul;
     private final AppCompatActivity activity = hoteisRecreio.this;
     private DatabaseHelper databaseHelper;
-    private User user;
-    private SQLiteDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +43,6 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
 
     private void initObjects(){
         databaseHelper = new DatabaseHelper(this);
-        database = databaseHelper.getWritableDatabase();
-        user = new User();
-
     }
 
     private void initListeners() {
@@ -142,7 +135,6 @@ public class hoteisRecreio extends AppCompatActivity implements View.OnClickList
                     startActivity(roteiro);
                     break;
                 }
-
         }
     }
 }

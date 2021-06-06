@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.passeiosBarra"
+    android:background="@drawable/travelbackgroundpng2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/passeiosRecreio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/passeiosRecreio"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/quebramar"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/quebramar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="-133dp"
+            android:text="@string/quebramar"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:textColor="@color/black"
+            android:text="@string/quebramardescricao" />
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnQuebramar"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="60sp"
+            android:background="@drawable/reservamarapendi"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/reservamarapendi"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/reservamarapendi"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/reservamarapendi"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnReservaMarapendi"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="60sp"
+            android:background="@drawable/pier"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/pier"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/pier"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/pierdescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnPier"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="60sp"
+            android:background="@drawable/praiadabarra"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/praiadabarra"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/praiadabarra"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/praiadabarradescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnPraiadaBarra"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -131,6 +131,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
 
+    public Boolean limparRoteiro(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(COLUMN_ROTEIRO_REGIAO, "");
+        values.put(COLUMN_ROTEIRO_PASSEIO, "");
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA, "");
+        values.put(COLUMN_ROTEIRO_HOTEL, "");
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result==-1) return false;
+        else return true;
+    }
+
     public Boolean addGastronomia(String email ,String gastronomia){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
