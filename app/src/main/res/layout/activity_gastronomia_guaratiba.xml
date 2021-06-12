@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.gastronomiaGuaratiba"
+    android:background="@drawable/travelbackgroundpng2"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:isScrollContainer="true">
+
+        <TextView
+            android:id="@+id/gastronomiaRecreio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/gastronomiaRecreio"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/biradeguaratiba"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/bira"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="-133dp"
+            android:text="@string/bira"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:textColor="@color/black"
+            android:text="@string/biradescricao" />
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnBira"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/tiapenha"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tiapenha"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/tiapenha"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/tiapenhadescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnTiapenha"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/mirante"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mirante"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/mirante"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/mirantedescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnMirante"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/aquarios"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:text="@string/aquarios"
+            android:id="@+id/aquarios"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/aquariosdescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnAquarios"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+        <ImageView
+            android:layout_width="130sp"
+            android:layout_height="130sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="50sp"
+            android:background="@drawable/tropicana"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:layout_marginTop="-133sp"
+            android:id="@+id/tropicana"
+            android:text="@string/tropicana"
+            android:textColor="@color/black"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145sp"
+            android:textColor="@color/black"
+            android:text="@string/tropicanadescricao"/>
+
+        <ImageButton
+            android:layout_width="30sp"
+            android:id="@+id/btnTropicana"
+            android:layout_height="30sp"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/coracao" />
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

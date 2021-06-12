@@ -141,6 +141,36 @@ public class opcoesRoteiro extends AppCompatActivity implements View.OnClickList
                     break;
                 }
             }
+                if (regiao.equals("guaratiba")){
+                    if (precisoPasseio.isChecked()) {
+                        Intent passeio1 = new Intent(this, passeiosGuaratiba.class);
+                        passeio1.putExtra("EMAIL", email);
+                        passeio1.putExtra("OPÇÃO", "passeio");
+                        startActivity(passeio1);
+                        break;
+                    }
+                    if (precisoGastronomia.isChecked()){
+                        Intent gastronomia1 = new Intent (this, gastronomiaGuaratiba.class);
+                        gastronomia1.putExtra("EMAIL", email);
+                        gastronomia1.putExtra("OPÇÃO", "gastronomia");
+                        startActivity(gastronomia1);
+                        break;
+                    }
+                    if (precisoHotel.isChecked()){
+                        Intent hotel1 = new Intent(this, hoteisGuaratiba.class);
+                        hotel1.putExtra("EMAIL", email);
+                        hotel1.putExtra("OPÇÃO", "hotel");
+                        startActivity(hotel1);
+                        break;
+                    }
+                    if (roteiroCompleto.isChecked()){
+                        Intent completo1 = new Intent(this, hoteisGuaratiba.class);
+                        completo1.putExtra("EMAIL", email);
+                        completo1.putExtra("OPÇÃO", "completo");
+                        startActivity(completo1);
+                        break;
+                    }
+                }
         }
     }
 }
