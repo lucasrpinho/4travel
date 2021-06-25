@@ -127,12 +127,64 @@
                 android:gravity="center"
                 android:textSize="24sp"
                 android:textColor="@color/colorTextHint" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MATINAL"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"/>
 
             <TextView
                 android:id="@+id/txtGastronomia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="7sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:ellipsize="end"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALMOÇO"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtGastronomia2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOTURNO"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtGastronomia3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
                 android:layout_gravity="center"
                 android:textAlignment="center"
                 android:layout_weight="1"
@@ -157,10 +209,63 @@
                 android:gravity="center"
                 android:textSize="24sp"
                 android:textColor="@color/colorTextHint" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MATINAL"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"/>
+
             <TextView
                 android:id="@+id/txtPasseio"
                 android:layout_width="match_parent"
-                android:layout_marginTop="7sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VESPERTINO"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtPasseio2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOTURNO"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginTop="5sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/txtPasseio3"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center"

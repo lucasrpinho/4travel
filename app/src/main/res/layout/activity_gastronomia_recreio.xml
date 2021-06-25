@@ -30,6 +30,58 @@
             android:layout_marginStart="10dp"
             android:layout_height="130dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/reidorecreio"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/reidorecreio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="-133dp"
+            android:text="@string/reidorecreio"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:textColor="@color/black"
+            android:text="@string/reidorecreiodescricao" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnReiManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnReiAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnReiNoturno"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/nabrasa"
             android:contentDescription="@string/todo" />
 
@@ -52,12 +104,32 @@
             android:text="@string/descricaoNaBrasa" />
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnNaBrasa"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnNabrasaManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnNabrasaAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnNabrasaNoturno"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -84,12 +156,32 @@
             android:text="@string/descricaoRioSul"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnRiosul"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnRioSulManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnRioSulAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnRioSulNoturno"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -116,12 +208,32 @@
             android:text="@string/descricaobahamas"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnBahamas"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnBahamasManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnBahamasAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnBahamasNoturno"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -148,12 +260,32 @@
             android:text="@string/descricaokacua"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnKacua"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnKacuaManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnKacuaAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnKacuaNoturno"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -180,12 +312,32 @@
             android:text="@string/descricaoparme"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnParme"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnParmeManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnParmeAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnParmeNoturno"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -212,12 +364,43 @@
             android:text="@string/descricaoriozen"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnRiozen"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnRiozenManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnRiozenVespertino"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnRioZenNoturno"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/nextScreen"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="40sp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:backgroundTint="#174280"
+            android:text="PRÓXIMA TELA"/>
 
 
 

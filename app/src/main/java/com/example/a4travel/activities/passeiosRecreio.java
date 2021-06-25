@@ -3,8 +3,10 @@ package com.example.a4travel.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,8 +18,9 @@ import com.example.a4travel.model.User;
 public class passeiosRecreio extends AppCompatActivity implements View.OnClickListener {
         private final AppCompatActivity activity = passeiosRecreio.this;
         private TextView praiasecreto, shoppingamericas, reserva, chicomendes, pedrapontal;
-        private ImageButton btnpedrapontal, btnreserva, btnamericas, btnsecreto, btnchicomendes;
+        private ImageButton btnPontalManha, btnPontalTarde, btnPontalNoite, btnreservaManha, btnreservaTarde, btnreservaNoite, btnamericasManha, btnamericasTarde, btnamericasNoite, btnsecretoManha, btnsecretoTarde, btnsecretoNoite, btnchicomendesManha, btnchicomendesTarde, btnchicomendesNoite;
         private DatabaseHelper databaseHelper;
+        private Button proxTela;
         private User user;
 
     @Override
@@ -44,59 +47,111 @@ public class passeiosRecreio extends AppCompatActivity implements View.OnClickLi
         chicomendes = (TextView) findViewById(R.id.chicomendes);
         pedrapontal = (TextView) findViewById(R.id.pedrapontal);
 
-        btnamericas = (ImageButton) findViewById(R.id.btnAmericas);
-        btnchicomendes = (ImageButton) findViewById(R.id.btnChicoMendes);
-        btnpedrapontal = (ImageButton) findViewById(R.id.btnPedraPontal);
-        btnsecreto = (ImageButton) findViewById(R.id.btnPraiaSecreto);
-        btnreserva = (ImageButton) findViewById(R.id.btnReserva);
+        btnamericasManha = (ImageButton) findViewById(R.id.btnAmericasManha);
+        btnamericasTarde = (ImageButton) findViewById(R.id.btnAmericasTarde);
+        btnamericasNoite = (ImageButton) findViewById(R.id.btnAmericasNoite);
+        btnchicomendesManha = (ImageButton) findViewById(R.id.btnChicoMendesManha);
+        btnchicomendesTarde = (ImageButton) findViewById(R.id.btnChicoMendesTarde);
+        btnchicomendesNoite = (ImageButton) findViewById(R.id.btnChicoMendesNoite);
+        btnPontalManha = (ImageButton) findViewById(R.id.btnPontalManha);
+        btnPontalTarde = (ImageButton) findViewById(R.id.btnPontalTarde);
+        btnPontalNoite = (ImageButton) findViewById(R.id.btnPontalNoite);
+        btnsecretoManha = (ImageButton) findViewById(R.id.btnSecretoManha);
+        btnsecretoTarde = (ImageButton) findViewById(R.id.btnSecretoVespertino);
+        btnsecretoNoite = (ImageButton) findViewById(R.id.btnSecretoNoite);
+        btnreservaManha = (ImageButton) findViewById(R.id.btnReservaManha);
+        btnreservaTarde = (ImageButton) findViewById(R.id.btnReservaTarde);
+        btnreservaNoite = (ImageButton) findViewById(R.id.btnReservaNoite);
+        proxTela = (Button) findViewById(R.id.proxTela);
     }
 
     private void initListeners(){
-        btnreserva.setOnClickListener(this);
-        btnchicomendes.setOnClickListener(this);
-        btnamericas.setOnClickListener(this);
-        btnsecreto.setOnClickListener(this);
-        btnpedrapontal.setOnClickListener(this);
+        btnreservaManha.setOnClickListener(this);
+        btnreservaTarde.setOnClickListener(this);
+        btnreservaNoite.setOnClickListener(this);
+        btnchicomendesManha.setOnClickListener(this);
+        btnchicomendesTarde.setOnClickListener(this);
+        btnchicomendesNoite.setOnClickListener(this);
+        btnamericasManha.setOnClickListener(this);
+        btnamericasTarde.setOnClickListener(this);
+        btnamericasNoite.setOnClickListener(this);
+        btnsecretoManha.setOnClickListener(this);
+        btnsecretoTarde.setOnClickListener(this);
+        btnsecretoNoite.setOnClickListener(this);
+        btnPontalManha.setOnClickListener(this);
+        btnPontalTarde.setOnClickListener(this);
+        btnPontalNoite.setOnClickListener(this);
+        proxTela.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         String email = getIntent().getStringExtra("EMAIL");
         switch (view.getId()){
-            case R.id.btnAmericas:
+            case R.id.btnAmericasManha:
                 String passeio = shoppingamericas.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro = new Intent(this, RoteiroAdapter.class);
+                databaseHelper.addPasseioMatinal(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnAmericasTarde:
+                passeio = shoppingamericas.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnAmericasNoite:
+                passeio = shoppingamericas.getText().toString().trim();
+                databaseHelper.addPasseioNoturno(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnReservaManha:
+                passeio = reserva.getText().toString().trim();
+                databaseHelper.addPasseioMatinal(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnReservaTarde:
+                passeio = reserva.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnReservaNoite:
+                passeio = reserva.getText().toString().trim();
+                databaseHelper.addPasseioNoturno(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnChicoMendesManha:
+                passeio = chicomendes.getText().toString().trim();
+                databaseHelper.addPasseioMatinal(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnChicoMendesTarde:
+                passeio = chicomendes.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnChicoMendesNoite:
+                passeio = chicomendes.getText().toString().trim();
+                databaseHelper.addPasseioNoturno(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnSecretoManha:
+                passeio = praiasecreto.getText().toString().trim();
+                databaseHelper.addPasseioMatinal(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnSecretoVespertino:
+                passeio = praiasecreto.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnSecretoNoite:
+                passeio = praiasecreto.getText().toString().trim();
+                databaseHelper.addPasseioNoturno(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnPontalManha:
+                passeio = pedrapontal.getText().toString().trim();
+                databaseHelper.addPasseioMatinal(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnPontalTarde:
+                passeio = pedrapontal.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnPontalNoite:
+                passeio = pedrapontal.getText().toString().trim();
+                databaseHelper.addPasseioNoturno(email, passeio);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.proxTela:
+                Intent roteiro = new Intent (this, RoteiroAdapter.class);
                 roteiro.putExtra("EMAIL", email);
                 startActivity(roteiro);
-                break;
-            case R.id.btnReserva:
-                passeio = reserva.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro2 = new Intent(this, RoteiroAdapter.class);
-                roteiro2.putExtra("EMAIL", email);
-                startActivity(roteiro2);
-                break;
-            case R.id.btnChicoMendes:
-                passeio = chicomendes.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro3 = new Intent(this, RoteiroAdapter.class);
-                roteiro3.putExtra("EMAIL", email);
-                startActivity(roteiro3);
-                break;
-            case R.id.btnPraiaSecreto:
-                passeio = praiasecreto.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro4 = new Intent(this, RoteiroAdapter.class);
-                roteiro4.putExtra("EMAIL", email);
-                startActivity(roteiro4);
-                break;
-            case R.id.btnPedraPontal:
-                passeio = pedrapontal.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro5 = new Intent(this, RoteiroAdapter.class);
-                roteiro5.putExtra("EMAIL", email);
-                startActivity(roteiro5);
                 break;
         }
     }

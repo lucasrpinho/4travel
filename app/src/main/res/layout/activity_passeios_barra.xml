@@ -51,12 +51,31 @@
             android:text="@string/quebramardescricao" />
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnQuebramar"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnQuebramarManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnQuebramarTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnQuebraMarNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -80,15 +99,26 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="145sp"
             android:textColor="@color/black"
-            android:text="@string/reservamarapendi"/>
+            android:text="@string/reservamarapendidescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnReservaMarapendi"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnMarapendiManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="195sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnMarapendiTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="260sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
 
         <ImageView
             android:layout_width="130sp"
@@ -115,12 +145,31 @@
             android:text="@string/pierdescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnPier"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnPierManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnPierTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnPierNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -147,12 +196,41 @@
             android:text="@string/praiadabarradescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnPraiadaBarra"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnBarraManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnBarraTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnBarraNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/nextScreen3"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="20sp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:backgroundTint="#174280"
+            android:text="VISUALIZE SEU ROTEIRO"/>
 
     </LinearLayout>
 

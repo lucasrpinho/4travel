@@ -29,8 +29,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_ROTEIRO_REGIAO = "roteiro_regiao";
     private static final String COLUMN_ROTEIRO_HOTEL = "roteiro_hotel";
     private static final String COLUMN_ROTEIRO_ID = "roteiro_id";
-    private static final String COLUMN_ROTEIRO_GASTRONOMIA = "roteiro_gastronomia";
-    private static final String COLUMN_ROTEIRO_PASSEIO = "roteiro_passeio";
+    private static final String COLUMN_ROTEIRO_GASTRONOMIA_NOTURNA = "roteiro_gastronomia_noturna";
+    private static final String COLUMN_ROTEIRO_GASTRONOMIA_ALMOÇO = "roteiro_gastronomia_almoço";
+    private static final String COLUMN_ROTEIRO_GASTRONOMIA_MATINAL = "roteiro_gastronomia_matinal";
+    private static final String COLUMN_ROTEIRO_PASSEIO_MATINAL = "roteiro_passeio_matinal";
+    private static final String COLUMN_ROTEIRO_PASSEIO_VESPERTINO = "roteiro_passeio_vespertino";
+    private static final String COLUMN_ROTEIRO_PASSEIO_NOTURNO = "roteiro_passeio_noturno";
     private List<User> listUsers;
 
 
@@ -39,7 +43,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private String CREATE_USUARIO_TABLE = "CREATE TABLE " + TABLE_USUARIO + "("
             + COLUMN_USUARIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_USUARIO_NOME + " TEXT,"
             + COLUMN_USUARIO_EMAIL + " TEXT," + COLUMN_USUARIO_SENHA + " TEXT," + DatabaseHelper.COLUMN_ROTEIRO_HOTEL + " TEXT,"
-            + COLUMN_ROTEIRO_GASTRONOMIA + " TEXT," + COLUMN_ROTEIRO_PASSEIO + " TEXT," + COLUMN_ROTEIRO_REGIAO + " TEXT" + ")";
+            + COLUMN_ROTEIRO_GASTRONOMIA_MATINAL + " TEXT," + COLUMN_ROTEIRO_GASTRONOMIA_ALMOÇO + " TEXT," + COLUMN_ROTEIRO_GASTRONOMIA_NOTURNA + " TEXT,"
+            + COLUMN_ROTEIRO_PASSEIO_MATINAL + " TEXT," + COLUMN_ROTEIRO_PASSEIO_NOTURNO + " TEXT," + COLUMN_ROTEIRO_PASSEIO_VESPERTINO + " TEXT,"
+            + COLUMN_ROTEIRO_REGIAO + " TEXT" + ")";
 
 
     // drop table sql query
@@ -66,26 +72,87 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public String getGastronomia(String email) {
-        String gastronomia = "Não escolhido";
+    public String getGastronomia_matinal(String email) {
+        String gastronomia = "";
         SQLiteDatabase db = this.getReadableDatabase();
         String whereclause = "usuario_email= ?";
         String[] whereargs = new String[]{String.valueOf(email)};
         Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
         if (csr.moveToFirst()){
-            gastronomia = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA));
+            gastronomia = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA_MATINAL));
         }
         return gastronomia;
     }
 
-    public String getPasseio(String email) {
-        String passeio = "Não escolhido";
+    public String getGastronomia_noturna(String email) {
+        String gastronomia = "";
         SQLiteDatabase db = this.getReadableDatabase();
         String whereclause = "usuario_email= ?";
         String[] whereargs = new String[]{String.valueOf(email)};
         Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
         if (csr.moveToFirst()){
-            passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO));
+            gastronomia = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA_NOTURNA));
+        }
+        return gastronomia;
+    }
+
+    public String getGastronomia_almoço(String email) {
+        String gastronomia = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String whereclause = "usuario_email= ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            gastronomia = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA_ALMOÇO));
+        }
+        return gastronomia;
+    }
+
+
+    public String getPasseio_Matinal(String email) {
+        String passeio = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String whereclause = "usuario_email= ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO_MATINAL));
+        }
+        return passeio;
+    }
+
+    public String getPasseioVespertino(String email) {
+        String passeio = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String whereclause = "usuario_email= ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO_VESPERTINO));
+        }
+        return passeio;
+    }
+
+    public String getPasseioNoturno(String email) {
+        String passeio = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String whereclause = "usuario_email= ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO_NOTURNO));
+        }
+        return passeio;
+    }
+
+    public String getPasseioMatinal(String email) {
+        String passeio = "";
+        SQLiteDatabase db = this.getReadableDatabase();
+        String whereclause = "usuario_email= ?";
+        String[] whereargs = new String[]{String.valueOf(email)};
+        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
+        if (csr.moveToFirst()){
+            passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO_VESPERTINO));
         }
         return passeio;
     }
@@ -135,27 +202,67 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_ROTEIRO_REGIAO, "");
-        values.put(COLUMN_ROTEIRO_PASSEIO, "");
-        values.put(COLUMN_ROTEIRO_GASTRONOMIA, "");
+        values.put(COLUMN_ROTEIRO_PASSEIO_MATINAL, "");
+        values.put(COLUMN_ROTEIRO_PASSEIO_VESPERTINO, "");
+        values.put(COLUMN_ROTEIRO_PASSEIO_NOTURNO, "");
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA_MATINAL, "");
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA_ALMOÇO, "");
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA_NOTURNA, "");
         values.put(COLUMN_ROTEIRO_HOTEL, "");
         long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
         if (result==-1) return false;
         else return true;
     }
 
-    public Boolean addGastronomia(String email ,String gastronomia){
+    public Boolean addGastronomiaMatinal(String email ,String gastronomia){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_ROTEIRO_GASTRONOMIA, gastronomia);
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_GASTRONOMIA_MATINAL, gastronomia);
         long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
         if (result ==-1) return false;
         else return true;
     }
 
-    public Boolean addPasseio(String email, String passeio){
+    public Boolean addGastronomiaAlmoço(String email ,String gastronomia){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_ROTEIRO_PASSEIO, passeio);
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_GASTRONOMIA_ALMOÇO, gastronomia);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
+    }
+
+    public Boolean addGastronomiaNoturno(String email ,String gastronomia){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_GASTRONOMIA_NOTURNA, gastronomia);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
+    }
+
+    public Boolean addPasseioMatinal(String email, String passeio){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_PASSEIO_MATINAL, passeio);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
+    }
+
+    public Boolean addPasseioVespertino(String email, String passeio){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_PASSEIO_VESPERTINO, passeio);
+        long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
+        if (result ==-1) return false;
+        else return true;
+    }
+
+    public Boolean addPasseioNoturno(String email, String passeio){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DatabaseHelper.COLUMN_ROTEIRO_PASSEIO_NOTURNO, passeio);
         long result = db.update(TABLE_USUARIO, values, COLUMN_USUARIO_EMAIL + "= ?", new String[]{email});
         if (result ==-1) return false;
         else return true;
@@ -183,48 +290,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_USUARIO_EMAIL, user.getEmail());
         values.put(COLUMN_USUARIO_SENHA, user.getSenha());
         values.put(COLUMN_ROTEIRO_HOTEL, user.getHotel());
-        values.put(COLUMN_ROTEIRO_GASTRONOMIA, user.getGastronomia());
-        values.put(COLUMN_ROTEIRO_PASSEIO, user.getPasseio());
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA_MATINAL, user.getGastronomiaMatinal());
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA_ALMOÇO, user.getGastronomiaAlmoço());
+        values.put(COLUMN_ROTEIRO_GASTRONOMIA_NOTURNA, user.getGastronomiaNoturno());
+        values.put(COLUMN_ROTEIRO_PASSEIO_VESPERTINO, user.getPasseioVespertino());
+        values.put(COLUMN_ROTEIRO_PASSEIO_NOTURNO, user.getPasseioNoturno());
+        values.put(COLUMN_ROTEIRO_PASSEIO_MATINAL, user.getPasseioMatinal());
         values.put(COLUMN_ROTEIRO_REGIAO, user.getRegiao());
         // Inserting Row
         db.insert(TABLE_USUARIO, null, values);
         db.close();
-    }
-
-    public List<User> getAllRoteiro() {
-        // array of columns to fetch
-        String[] columns = {
-                COLUMN_ROTEIRO_REGIAO,
-                COLUMN_ROTEIRO_PASSEIO,
-                COLUMN_ROTEIRO_GASTRONOMIA,
-                COLUMN_ROTEIRO_HOTEL
-        };
-        String sortOrder =
-                COLUMN_ROTEIRO_ID + " ASC";
-        List<User> roteiroList = new ArrayList<User>();
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_USUARIO, //Table to query
-                columns,    //columns to return
-                null,        //columns for the WHERE clause
-                null,        //The values for the WHERE clause
-                null,       //group the rows
-                null,       //filter by row groups
-                sortOrder); //The sort order
-        if (cursor.moveToFirst()) {
-            do {
-                User user = new User();
-                user.setIdRoteiro(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_ID))));
-                user.setHotel(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_HOTEL)));
-                user.setGastronomia(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA)));
-                user.setPasseio(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_PASSEIO)));
-                user.setRegiao(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_REGIAO)));
-                roteiroList.add(user);
-            } while (cursor.moveToNext());
-        }
-        cursor.close();
-        db.close();
-        // return roteiro list
-        return roteiroList;
     }
 
     /**
@@ -238,10 +313,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_USUARIO_ID,
                 COLUMN_USUARIO_EMAIL,
                 COLUMN_USUARIO_NOME,
-                COLUMN_USUARIO_SENHA,
-                COLUMN_ROTEIRO_HOTEL,
-                COLUMN_ROTEIRO_GASTRONOMIA,
-                COLUMN_ROTEIRO_PASSEIO
+                COLUMN_USUARIO_SENHA
         };
         // sorting orders
         String sortOrder =
@@ -269,9 +341,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 user.setNome(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_NOME)));
                 user.setEmail(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_EMAIL)));
                 user.setSenha(cursor.getString(cursor.getColumnIndex(COLUMN_USUARIO_SENHA)));
-                user.setHotel(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_HOTEL)));
-                user.setGastronomia(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_GASTRONOMIA)));
-                user.setPasseio(cursor.getString(cursor.getColumnIndex(COLUMN_ROTEIRO_PASSEIO)));
                 // Adding user record to list
                 userList.add(user);
             } while (cursor.moveToNext());

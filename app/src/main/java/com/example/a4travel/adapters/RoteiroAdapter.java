@@ -15,7 +15,7 @@ import com.example.a4travel.model.User;
 
 public class RoteiroAdapter extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView txtHotel, txtGastronomia, txtPasseio, nomeRoteiro, txtRegião;
+    private TextView txtHotel, txtGastronomia, txtGastronomia2, TxtGastronomia3, txtPasseio, txtPasseio2, txtPasseio3, nomeRoteiro, txtRegião;
     private Button btnRefazer, btnLimpar;
     private DatabaseHelper databaseHelper;
     private User user;
@@ -38,18 +38,30 @@ public class RoteiroAdapter extends AppCompatActivity implements View.OnClickLis
         String email = getIntent().getStringExtra("EMAIL");
         String hotel = databaseHelper.getHotel(email);
         txtHotel.setText(hotel);
-        String gastronomia = databaseHelper.getGastronomia(email);
+        String gastronomia = databaseHelper.getGastronomia_matinal(email);
         txtGastronomia.setText(gastronomia);
-        String passeio = databaseHelper.getPasseio(email);
+        String gastronomia2 = databaseHelper.getGastronomia_almoço(email);
+        txtGastronomia2.setText(gastronomia2);
+        String gastronomia3 = databaseHelper.getGastronomia_noturna(email);
+        TxtGastronomia3.setText(gastronomia3);
+        String passeio = databaseHelper.getPasseioMatinal(email);
         txtPasseio.setText(passeio);
+        String passeio2 = databaseHelper.getPasseioVespertino(email);
+        txtPasseio2.setText(passeio2);
+        String passeio3 = databaseHelper.getPasseioNoturno(email);
+        txtPasseio3.setText(passeio3);
         String regiao = databaseHelper.getRegiao(email);
         txtRegião.setText(regiao);
     }
 
     private void initViews(){
-        txtGastronomia = (TextView) findViewById(R.id.txtGastronomia);
         txtHotel = (TextView) findViewById(R.id.txtHotel);
+        txtGastronomia = (TextView) findViewById(R.id.txtGastronomia);
+        txtGastronomia2 = (TextView) findViewById(R.id.txtGastronomia2);
+        TxtGastronomia3 = (TextView) findViewById(R.id.txtGastronomia3);
         txtPasseio = (TextView) findViewById(R.id.txtPasseio);
+        txtPasseio2 = (TextView) findViewById(R.id.txtPasseio2);
+        txtPasseio3 = (TextView) findViewById(R.id.txtPasseio3);
         nomeRoteiro = (TextView) findViewById(R.id.nomeRoteiro);
         txtRegião = (TextView) findViewById(R.id.txtRegião);
         btnLimpar = (Button) findViewById(R.id.btnLimpar);
@@ -74,7 +86,11 @@ public class RoteiroAdapter extends AppCompatActivity implements View.OnClickLis
                 txtHotel.setText("");
                 txtRegião.setText("");
                 txtPasseio.setText("");
+                txtPasseio2.setText("");
+                txtPasseio3.setText("");
                 txtGastronomia.setText("");
+                txtGastronomia2.setText("");
+                TxtGastronomia3.setText("");
                 databaseHelper.limparRoteiro(email);
             break;
             case R.id.btnRefazer:

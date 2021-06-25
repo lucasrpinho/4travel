@@ -51,12 +51,31 @@
             android:text="@string/descricaoPraiaSecreto" />
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnPraiaSecreto"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnSecretoManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnSecretoVespertino"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnSecretoNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -83,12 +102,31 @@
             android:text="@string/descricaopedrapontal"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnPedraPontal"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnPontalManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnPontalTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnPontalNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -115,12 +153,31 @@
             android:text="@string/descricaoamericas"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnAmericas"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnAmericasManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnAmericasTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnAmericasNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -147,13 +204,31 @@
             android:text="@string/descricaochicomendes"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnChicoMendes"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnChicoMendesManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
 
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnChicoMendesTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnChicoMendesNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
         <ImageView
             android:layout_width="130sp"
             android:layout_height="130sp"
@@ -179,12 +254,42 @@
             android:text="@string/descricaoreserva"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnReserva"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnReservaManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/sun" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnReservaTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnReservaNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/proxTela"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="20sp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:backgroundTint="#174280"
+            android:text="PRÓXIMA TELA"/>
 
 
 

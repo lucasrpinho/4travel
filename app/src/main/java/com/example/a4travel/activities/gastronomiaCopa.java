@@ -3,8 +3,10 @@ package com.example.a4travel.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,8 +18,10 @@ public class gastronomiaCopa extends AppCompatActivity implements View.OnClickLi
 
     private AppCompatActivity activity = gastronomiaCopa.this;
     private DatabaseHelper databaseHelper;
-    private TextView mondego, lamole, pergula, doncamillo, conversafora, eclipse;
-    private ImageButton btnMondego, btnLamole, btnPergula, btnDoncamillo, btnConversafora, btnEclipse;
+    private TextView mondego, lamole, pergula, doncamillo, conversafora, eclipse, paocia;
+    private ImageButton btnMondegoAlmoço, btnMondegoNoite, btnLamoleAlmoço, btnLaMoleNoite, btnPergulaAlmoço, btnPergulaNoite, btnDoncamilloAlmoço, btnCamilloNoite;
+    private ImageButton btnConversaforaAlmoço, btnConversaforaNoite, btnEclipseAlmoço, btnEclipseNoite, btnpaociaManha, btnpaociaNoite;
+    private Button nextScreen4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +41,22 @@ public class gastronomiaCopa extends AppCompatActivity implements View.OnClickLi
         pergula = (TextView) findViewById(R.id.pergula);
         doncamillo = (TextView) findViewById(R.id.doncamillo);
         eclipse = (TextView) findViewById(R.id.eclipse);
-        btnConversafora = (ImageButton) findViewById(R.id.btnConversa);
-        btnDoncamillo = (ImageButton) findViewById(R.id.btnDoncamillo);
-        btnEclipse = (ImageButton) findViewById(R.id.btnEclipse);
-        btnLamole = (ImageButton) findViewById(R.id.btnLamole);
-        btnPergula = (ImageButton) findViewById(R.id.btnPergula);
-        btnMondego = (ImageButton) findViewById(R.id.btnMondego);
+        paocia = (TextView) findViewById(R.id.paocia);
+        btnConversaforaAlmoço = (ImageButton) findViewById(R.id.btnConversaAlmoço);
+        btnConversaforaNoite = (ImageButton) findViewById(R.id.btnConversaNoite);
+        btnDoncamilloAlmoço = (ImageButton) findViewById(R.id.btnCamilloAlmoço);
+        btnCamilloNoite = (ImageButton) findViewById(R.id.btnCamilloNoite);
+        btnEclipseAlmoço = (ImageButton) findViewById(R.id.btnEclipseAlmoço);
+        btnEclipseNoite = (ImageButton) findViewById(R.id.btnEclipseNoite);
+        btnLamoleAlmoço = (ImageButton) findViewById(R.id.btnLamoleAlmoço);
+        btnLaMoleNoite = (ImageButton) findViewById(R.id.btnLamoleNoite);
+        btnPergulaNoite = (ImageButton) findViewById(R.id.btnPergulaNoite);
+        btnPergulaAlmoço = (ImageButton) findViewById(R.id.btnPergulaAlmoço);
+        btnMondegoAlmoço = (ImageButton) findViewById(R.id.btnMondegoAlmoço);
+        btnMondegoNoite = (ImageButton) findViewById(R.id.btnMondegoNoite);
+        nextScreen4 = (Button) findViewById(R.id.nextScreen4);
+        btnpaociaManha = (ImageButton) findViewById(R.id.btnPaoCia);
+        btnpaociaNoite = (ImageButton) findViewById(R.id.btnPaoCiaNoturno);
     }
 
     private void initObjects() {
@@ -50,114 +64,92 @@ public class gastronomiaCopa extends AppCompatActivity implements View.OnClickLi
     }
 
     private void initListeners() {
-        btnMondego.setOnClickListener(this);
-        btnPergula.setOnClickListener(this);
-        btnLamole.setOnClickListener(this);
-        btnEclipse.setOnClickListener(this);
-        btnDoncamillo.setOnClickListener(this);
-        btnConversafora.setOnClickListener(this);
+        btnMondegoAlmoço.setOnClickListener(this);
+        btnMondegoNoite.setOnClickListener(this);
+        btnPergulaAlmoço.setOnClickListener(this);
+        btnPergulaNoite.setOnClickListener(this);
+        btnLamoleAlmoço.setOnClickListener(this);
+        btnLaMoleNoite.setOnClickListener(this);
+        btnEclipseAlmoço.setOnClickListener(this);
+        btnEclipseNoite.setOnClickListener(this);
+        btnDoncamilloAlmoço.setOnClickListener(this);
+        btnCamilloNoite.setOnClickListener(this);
+        btnConversaforaAlmoço.setOnClickListener(this);
+        btnConversaforaNoite.setOnClickListener(this);
+        btnpaociaNoite.setOnClickListener(this);
+        btnpaociaManha.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         String opcao = getIntent().getStringExtra("OPÇÃO");
+        String email = getIntent().getStringExtra("EMAIL");
         switch (view.getId()){
-            case R.id.btnLamole:
+            case R.id.btnLamoleAlmoço:
                 String gastronomia = lamole.getText().toString().trim();
-                String email = getIntent().getStringExtra("EMAIL");
-                databaseHelper.addGastronomia(email, gastronomia);
-
-                if (opcao.equals("completo")){
-                    Intent passeio = new Intent(this, passeiosCopa.class);
-                    passeio.putExtra("EMAIL", email);
-                    passeio.putExtra("OPÇÃO", opcao);
-                    startActivity(passeio);
-                    break;
-                }
-                if (opcao.equals("gastronomia")) {
-                    Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    roteiro.putExtra("EMAIL", email);
-                    startActivity(roteiro);
-                    break;
-                }
-            case R.id.btnEclipse:
+                databaseHelper.addGastronomiaAlmoço(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnLamoleNoite:
+                gastronomia = lamole.getText().toString().trim();
+                databaseHelper.addGastronomiaNoturno(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnEclipseAlmoço:
                 gastronomia = eclipse.getText().toString().trim();
-                email = getIntent().getStringExtra("EMAIL");
-                databaseHelper.addGastronomia(email, gastronomia);
-
-                if (opcao.equals("completo")){
-                    Intent passeio = new Intent(this, passeiosCopa.class);
-                    passeio.putExtra("EMAIL", email);
-                    passeio.putExtra("OPÇÃO", opcao);
-                    startActivity(passeio);
-                    break;
-                }
-                if (opcao.equals("gastronomia")) {
-                    Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    roteiro.putExtra("EMAIL", email);
-                    startActivity(roteiro);
-                    break;
-                }
-            case R.id.btnMondego:
+                databaseHelper.addGastronomiaAlmoço(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnEclipseNoite:
+                gastronomia = eclipse.getText().toString().trim();
+                databaseHelper.addGastronomiaNoturno(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnMondegoAlmoço:
                 gastronomia = mondego.getText().toString().trim();
-                email = getIntent().getStringExtra("EMAIL");
-                databaseHelper.addGastronomia(email, gastronomia);
-
-                if (opcao.equals("completo")){
-                    Intent passeio = new Intent(this, passeiosCopa.class);
-                    passeio.putExtra("EMAIL", email);
-                    passeio.putExtra("OPÇÃO", opcao);
-                    startActivity(passeio);
-                    break;
-                }
-                if (opcao.equals("gastronomia")) {
-                    Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    roteiro.putExtra("EMAIL", email);
-                    startActivity(roteiro);
-                    break;
-                }
-            case R.id.btnDoncamillo:
+                databaseHelper.addGastronomiaAlmoço(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnMondegoNoite:
+                gastronomia = mondego.getText().toString().trim();
+                databaseHelper.addGastronomiaNoturno(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnCamilloAlmoço:
                 gastronomia = doncamillo.getText().toString().trim();
-                email = getIntent().getStringExtra("EMAIL");
-                databaseHelper.addGastronomia(email, gastronomia);
-
-                if (opcao.equals("completo")){
-                    Intent passeio = new Intent(this, passeiosCopa.class);
-                    passeio.putExtra("EMAIL", email);
-                    passeio.putExtra("OPÇÃO", opcao);
-                    startActivity(passeio);
-                    break;
-                }
-                if (opcao.equals("gastronomia")) {
-                    Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    roteiro.putExtra("EMAIL", email);
-                    startActivity(roteiro);
-                    break;
-                }
-
-            case R.id.btnConversa:
+                databaseHelper.addGastronomiaAlmoço(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnCamilloNoite:
+                gastronomia = doncamillo.getText().toString().trim();
+                databaseHelper.addGastronomiaNoturno(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnConversaAlmoço:
                 gastronomia = conversafora.getText().toString().trim();
-                email = getIntent().getStringExtra("EMAIL");
-                databaseHelper.addGastronomia(email, gastronomia);
-
-                if (opcao.equals("completo")){
-                    Intent passeio = new Intent(this, passeiosCopa.class);
-                    passeio.putExtra("EMAIL", email);
-                    passeio.putExtra("OPÇÃO", opcao);
-                    startActivity(passeio);
-                    break;
-                }
-                if (opcao.equals("gastronomia")) {
-                    Intent roteiro = new Intent(this, RoteiroAdapter.class);
-                    roteiro.putExtra("EMAIL", email);
-                    startActivity(roteiro);
-                    break;
-                }
-            case R.id.btnPergula:
+                databaseHelper.addGastronomiaAlmoço(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnConversaNoite:
+                gastronomia = conversafora.getText().toString().trim();
+                databaseHelper.addGastronomiaNoturno(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnPergulaAlmoço:
                 gastronomia = pergula.getText().toString().trim();
-                email = getIntent().getStringExtra("EMAIL");
-                databaseHelper.addGastronomia(email, gastronomia);
-
+                databaseHelper.addGastronomiaAlmoço(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnPergulaNoite:
+                gastronomia = conversafora.getText().toString().trim();
+                databaseHelper.addGastronomiaNoturno(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+            case R.id.btnPaoCia:
+                gastronomia = paocia.getText().toString().trim();
+                databaseHelper.addGastronomiaMatinal(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnPaoCiaNoturno:
+                gastronomia = paocia.getText().toString().trim();
+                databaseHelper.addGastronomiaNoturno(email, gastronomia);
+                Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nextScreen4:
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosCopa.class);
                     passeio.putExtra("EMAIL", email);
@@ -171,6 +163,7 @@ public class gastronomiaCopa extends AppCompatActivity implements View.OnClickLi
                     startActivity(roteiro);
                     break;
                 }
+
         }
     }
 }

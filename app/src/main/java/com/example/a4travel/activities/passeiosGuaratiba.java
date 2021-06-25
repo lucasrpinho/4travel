@@ -3,6 +3,7 @@ package com.example.a4travel.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -16,8 +17,9 @@ public class passeiosGuaratiba extends AppCompatActivity implements View.OnClick
 
     private AppCompatActivity activity = passeiosGuaratiba.this;
     private DatabaseHelper databaseHelper;
-    private ImageButton btnBrisa, btnMagdalena, btnArca;
+    private ImageButton btnBrisaManha, btnBrisaTarde, btnBrisaNoite, btnMagdalenaManha, btnMagdalenaTarde, btnMagdalenaNoite, btnArcaManha, btnArcaTarde;
     private TextView brisa, magdalena, arca;
+    private Button nextScreen7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,42 +41,60 @@ public class passeiosGuaratiba extends AppCompatActivity implements View.OnClick
         magdalena = (TextView) findViewById(R.id.magdalena);
         arca = (TextView) findViewById(R.id.arcanoah);
 
-        btnArca = (ImageButton) findViewById(R.id.btnArca);
-        btnBrisa = (ImageButton) findViewById(R.id.btnBrisa);
-        btnMagdalena = (ImageButton) findViewById(R.id.btnMagdalena);
+        btnArcaManha = (ImageButton) findViewById(R.id.btnArcaManha);
+        btnArcaTarde = (ImageButton) findViewById(R.id.btnArcaTarde);
+        btnBrisaManha = (ImageButton) findViewById(R.id.btnBrisaManha);
+        btnBrisaTarde = (ImageButton) findViewById(R.id.btnBrisaTarde);
+        btnBrisaNoite = (ImageButton) findViewById(R.id.btnBrisaNoite);
+        btnMagdalenaManha = (ImageButton) findViewById(R.id.btnCapelaManha);
+        btnMagdalenaTarde = (ImageButton) findViewById(R.id.btnCapelaTarde);
+        btnMagdalenaNoite = (ImageButton) findViewById(R.id.btnCapelaNoite);
     }
 
     private void initListeners(){
-        btnMagdalena.setOnClickListener(this);
-        btnBrisa.setOnClickListener(this);
-        btnArca.setOnClickListener(this);
+        btnMagdalenaManha.setOnClickListener(this);
+        btnMagdalenaTarde.setOnClickListener(this);
+        btnMagdalenaNoite.setOnClickListener(this);
+        btnBrisaManha.setOnClickListener(this);
+        btnBrisaTarde.setOnClickListener(this);
+        btnBrisaNoite.setOnClickListener(this);
+        btnArcaManha.setOnClickListener(this);
+        btnArcaTarde.setOnClickListener(this);
+        nextScreen7.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         String email = getIntent().getStringExtra("EMAIL");
         switch (view.getId()){
-            case R.id.btnMagdalena:
+            case R.id.btnCapelaManha:
                 String passeio = magdalena.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro = new Intent(this, RoteiroAdapter.class);
+                databaseHelper.addPasseioMatinal(email, passeio);
+            case R.id.btnCapelaTarde:
+                passeio = magdalena.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+            case R.id.btnCapelaNoite:
+                passeio = magdalena.getText().toString().trim();
+                databaseHelper.addPasseioNoturno(email, passeio);
+            case R.id.btnBrisaManha:
+                passeio = brisa.getText().toString().trim();
+                databaseHelper.addPasseioMatinal(email, passeio);
+            case R.id.btnBrisaTarde:
+                passeio = brisa.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+            case R.id.btnBrisaNoite:
+                passeio = brisa.getText().toString().trim();
+                databaseHelper.addPasseioNoturno(email, passeio);
+            case R.id.btnArcaManha:
+                passeio = arca.getText().toString().trim();
+                databaseHelper.addPasseioMatinal(email, passeio);
+            case R.id.btnArcaTarde:
+                passeio = arca.getText().toString().trim();
+                databaseHelper.addPasseioVespertino(email, passeio);
+            case R.id.nextScreen7:
+                Intent roteiro = new Intent (this, RoteiroAdapter.class);
                 roteiro.putExtra("EMAIL", email);
                 startActivity(roteiro);
-                break;
-            case R.id.btnBrisa:
-                passeio = brisa.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro2 = new Intent(this, RoteiroAdapter.class);
-                roteiro2.putExtra("EMAIL", email);
-                startActivity(roteiro2);
-                break;
-            case R.id.btnArca:
-                passeio = arca.getText().toString().trim();
-                databaseHelper.addPasseio(email, passeio);
-                Intent roteiro3 = new Intent(this, RoteiroAdapter.class);
-                roteiro3.putExtra("EMAIL", email);
-                startActivity(roteiro3);
-                break;
         }
     }
 }

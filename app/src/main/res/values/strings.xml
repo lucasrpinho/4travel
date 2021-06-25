@@ -60,7 +60,15 @@
     <string name="descricaopedrapontal">Trilha localizada no posto 12 da praia do Recreio, conta com um lindo visual para tirar fotos e uma vista maravilhosa.</string>
     <string name="descricaoamericas">Shopping moderno para comprar roupas e artigos domésticos, praça de alimentação, cinema e pista de gelo.</string>
     <string name="reserva">RESERVA</string>
-    <string name="descricaoreserva">A Praia da Reserva, também conhecida como Praia da Reserva de Marapendi, é uma praia situada no bairro da Barra da Tijuca, na Zona Oeste da cidade do Rio de Janeiro. Com cerca de 8,0 km de extensão, localiza-se entre a Praia da Barra da Tijuca e a Praia do Recreio.</string>
+    <string name="paocia">PÃO E COMPANHIA</string>
+    <string name="alegria">ALEGRIA DE GUARATIBA PADARIA E MERCEARIA</string>
+    <string name="alegriadescricao">Padaria e mercearia que contém diversas opções para você aproveitar no local ou levar para sua casa.</string>
+    <string name="paociadescricao">Padaria localizada em Copacabana que oferece diversas opções.</string>
+    <string name="santamarta">PADARIA SANTA MARTA</string>
+    <string name="santamartadescricao">Casa de pães tem doces de confeiteiro com balcão de quitutes e cafeteria que serve lanches de copa e chapa.</string>
+    <string name="reidorecreio">PADARIA REI DO RECREIO</string>
+    <string name="reidorecreiodescricao">Café da manhã e almoços buffet, além de pães, bolos e sopas, em espaço amplo com mercearia e hortifruti.</string>
+    <string name="descricaoreserva">A Praia da Reserva, também conhecida como Praia da Reserva de Marapendi, é uma praia situada no bairro do Recreio, na Zona Oeste da cidade do Rio de Janeiro. Com cerca de 8,0 km de extensão, localiza-se entre a Praia da Barra da Tijuca e a Praia do Recreio.</string>
     <string name="riosul">RIO SUL</string>
     <string name="chicomendes">CHICO MENDES</string>
     <string name="descricaochicomendes">O Parque Ecológico Chico Mendes, ou Parque Natural Municipal Chico Mendes, é uma unidade de conservação pública situada no Recreio dos Bandeirantes, na cidade do Rio de Janeiro, Brasil.</string>

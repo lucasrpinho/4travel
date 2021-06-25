@@ -10,9 +10,13 @@ public class User {
     private String senha;
     private DatabaseHelper databaseHelper;
     private String hotel;
-    private String passeio;
+    private String passeioMatinal;
+    private String passeioVespertino;
+    private String passeioNoturno;
     private int idRoteiro;
-    private String gastronomia;
+    private String gastronomiaMatinal;
+    private String gastronomiaAlmoço;
+    private String gastronomiaNoturno;
     private String regiao;
 
 
@@ -64,20 +68,51 @@ public class User {
         this.hotel = hotel;
     }
 
-    public String getPasseio(){
-        return passeio;
+    public String getPasseioMatinal(){
+        return passeioMatinal;
     }
 
-    public String getGastronomia(){
-        return gastronomia;
+    public String getPasseioVespertino(){
+        return passeioVespertino;
     }
 
-    public void setGastronomia(String gastronomia){
-        this.gastronomia = gastronomia;
+    public String getPasseioNoturno(){
+        return passeioNoturno;
     }
 
-    public void setPasseio(String passeio){
-        this.passeio = passeio;
+    public String getGastronomiaAlmoço(){
+        return gastronomiaAlmoço;
+    }
+
+    public String getGastronomiaNoturno(){
+        return gastronomiaNoturno;
+    }
+
+    public String getGastronomiaMatinal(){
+        return gastronomiaMatinal;
+    }
+
+    public void setGastronomiaMatinal(String gastronomiaMatinal){
+        this.gastronomiaMatinal = gastronomiaMatinal;
+    }
+
+    public void setGastronomiaAlmoço(String gastronomiaAlmoço){
+        this.gastronomiaAlmoço = gastronomiaAlmoço;
+    }
+
+    public void setGastronomiaNoturno(String gastronomiaNoturno){
+        this.gastronomiaNoturno = gastronomiaNoturno;
+    }
+
+    public void setPasseioMatinal(String passeioMatinal){
+        this.passeioMatinal = passeioMatinal;
+    }
+
+    public void setPasseioVespertino(String passeioVespertino){
+        this.passeioVespertino = passeioVespertino;
+    }
+    public void setPasseioNoturno(String passeioNoturno){
+        this.passeioNoturno = passeioNoturno;
     }
 
     public void setRegiao(String regiao){

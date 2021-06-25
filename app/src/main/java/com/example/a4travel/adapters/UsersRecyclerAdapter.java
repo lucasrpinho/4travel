@@ -35,9 +35,6 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         holder.txtNome.setText(listUsers.get(position).getNome());
         holder.txtEmail.setText(listUsers.get(position).getEmail());
         holder.txtSenha.setText(listUsers.get(position).getSenha());
-        holder.hotelLista.setText(listUsers.get(position).getHotel());
-        holder.gastronomiaLista.setText(listUsers.get(position).getGastronomia());
-        holder.passeioLista.setText(listUsers.get(position).getPasseio());
         databaseHelper = new DatabaseHelper(null);
         user = new User();
 
@@ -64,9 +61,6 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         public TextView txtEmail;
         public TextView txtSenha;
         public TextView txtId;
-        public TextView hotelLista, gastronomiaLista, passeioLista;
-
-
 
         public UserViewHolder(View view) {
             super(view);
@@ -74,9 +68,6 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
             txtEmail = (TextView) view.findViewById(R.id.txtEmail);
             txtSenha = (TextView) view.findViewById(R.id.txtSenha);
             txtId = (TextView) view.findViewById(R.id.txtId);
-            hotelLista = (TextView) view.findViewById(R.id.hotelLista);
-            passeioLista = (TextView) view.findViewById(R.id.passeioLista);
-            gastronomiaLista = (TextView) view.findViewById(R.id.gastronomiaLista);
         }
     }
 }

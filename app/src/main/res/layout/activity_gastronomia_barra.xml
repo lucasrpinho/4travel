@@ -30,6 +30,58 @@
             android:layout_marginStart="10dp"
             android:layout_height="130dp"
             android:layout_marginTop="50sp"
+            android:background="@drawable/santamarta"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/santamarta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="-133dp"
+            android:text="@string/santamarta"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="145dp"
+            android:textColor="@color/black"
+            android:text="@string/santamartadescricao" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnSantaMartaManha"
+            android:layout_height="35sp"
+            android:layout_marginStart="165sp"
+            android:layout_marginTop="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnSantaMartaTarde"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="230sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnSantaMartaNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="50sp"
             android:background="@drawable/stadium"
             android:contentDescription="@string/todo" />
 
@@ -52,12 +104,32 @@
             android:text="@string/stadiumdescricao" />
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnStadium"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnStadiumManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnStadiumAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnStadiumNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -84,12 +156,32 @@
             android:text="@string/beccodescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnBecco"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnBeccoManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnBeccoAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnBeccoNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -116,12 +208,32 @@
             android:text="@string/deliriodescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnDelirio"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnDelirioManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnDelirioAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnDelirioNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -148,12 +260,32 @@
             android:text="@string/domheliodescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnDomhelio"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnDomHelioManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnDomHelioAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnDomHelioNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -180,12 +312,32 @@
             android:text="@string/gabbianodescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnGabbiano"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnGabbianoManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnGabbianoAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnGabbianoNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
 
         <ImageView
             android:layout_width="130sp"
@@ -212,12 +364,43 @@
             android:text="@string/maccheronedescricao"/>
 
         <ImageButton
-            android:layout_width="30sp"
-            android:id="@+id/btnMaccherone"
-            android:layout_height="30sp"
-            android:layout_marginStart="230sp"
+            android:layout_width="35sp"
+            android:id="@+id/btnMaccheroneManha"
+            android:layout_height="35sp"
+            android:visibility="invisible"
+            android:layout_marginStart="130sp"
             android:layout_marginTop="10sp"
-            android:background="@drawable/coracao" />
+            android:layout_weight="1"
+            android:background="@drawable/matinal" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnMaccheroneAlmoço"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="200sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/vespertino" />
+
+        <ImageButton
+            android:layout_width="35sp"
+            android:id="@+id/btnMaccheroneNoite"
+            android:layout_height="35sp"
+            android:layout_weight="1"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="-35sp"
+            android:background="@drawable/noturno" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/nextScreen2"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="40sp"
+            android:layout_gravity="center"
+            android:textSize="24sp"
+            android:backgroundTint="#174280"
+            android:text="PRÓXIMA TELA"/>
 
 
 
