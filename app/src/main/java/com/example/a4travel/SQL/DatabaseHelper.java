@@ -44,8 +44,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + COLUMN_USUARIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_USUARIO_NOME + " TEXT,"
             + COLUMN_USUARIO_EMAIL + " TEXT," + COLUMN_USUARIO_SENHA + " TEXT," + DatabaseHelper.COLUMN_ROTEIRO_HOTEL + " TEXT,"
             + COLUMN_ROTEIRO_GASTRONOMIA_MATINAL + " TEXT," + COLUMN_ROTEIRO_GASTRONOMIA_ALMOÇO + " TEXT," + COLUMN_ROTEIRO_GASTRONOMIA_NOTURNA + " TEXT,"
-            + COLUMN_ROTEIRO_PASSEIO_MATINAL + " TEXT," + COLUMN_ROTEIRO_PASSEIO_NOTURNO + " TEXT," + COLUMN_ROTEIRO_PASSEIO_VESPERTINO + " TEXT,"
-            + COLUMN_ROTEIRO_REGIAO + " TEXT" + ")";
+            + COLUMN_ROTEIRO_PASSEIO_MATINAL + " TEXT," + COLUMN_ROTEIRO_PASSEIO_VESPERTINO + " TEXT," + COLUMN_ROTEIRO_PASSEIO_NOTURNO + " TEXT," + COLUMN_ROTEIRO_REGIAO + " TEXT" + ")";
 
 
     // drop table sql query
@@ -109,7 +108,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public String getPasseio_Matinal(String email) {
+    public String getPasseioMatinal(String email) {
         String passeio = "";
         SQLiteDatabase db = this.getReadableDatabase();
         String whereclause = "usuario_email= ?";
@@ -141,18 +140,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
         if (csr.moveToFirst()){
             passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO_NOTURNO));
-        }
-        return passeio;
-    }
-
-    public String getPasseioMatinal(String email) {
-        String passeio = "";
-        SQLiteDatabase db = this.getReadableDatabase();
-        String whereclause = "usuario_email= ?";
-        String[] whereargs = new String[]{String.valueOf(email)};
-        Cursor csr = db.query(TABLE_USUARIO, null, whereclause, whereargs, null, null, null);
-        if (csr.moveToFirst()){
-            passeio = csr.getString(csr.getColumnIndex(COLUMN_ROTEIRO_PASSEIO_VESPERTINO));
         }
         return passeio;
     }

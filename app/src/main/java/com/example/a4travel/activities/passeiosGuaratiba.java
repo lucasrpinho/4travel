@@ -70,27 +70,35 @@ public class passeiosGuaratiba extends AppCompatActivity implements View.OnClick
             case R.id.btnCapelaManha:
                 String passeio = magdalena.getText().toString().trim();
                 databaseHelper.addPasseioMatinal(email, passeio);
+                break;
             case R.id.btnCapelaTarde:
                 passeio = magdalena.getText().toString().trim();
                 databaseHelper.addPasseioVespertino(email, passeio);
+                break;
             case R.id.btnCapelaNoite:
                 passeio = magdalena.getText().toString().trim();
                 databaseHelper.addPasseioNoturno(email, passeio);
+                break;
             case R.id.btnBrisaManha:
                 passeio = brisa.getText().toString().trim();
                 databaseHelper.addPasseioMatinal(email, passeio);
+                break;
             case R.id.btnBrisaTarde:
                 passeio = brisa.getText().toString().trim();
                 databaseHelper.addPasseioVespertino(email, passeio);
+                break;
             case R.id.btnBrisaNoite:
                 passeio = brisa.getText().toString().trim();
                 databaseHelper.addPasseioNoturno(email, passeio);
+                break;
             case R.id.btnArcaManha:
                 passeio = arca.getText().toString().trim();
                 databaseHelper.addPasseioMatinal(email, passeio);
+                break;
             case R.id.btnArcaTarde:
                 passeio = arca.getText().toString().trim();
                 databaseHelper.addPasseioVespertino(email, passeio);
+                break;
             case R.id.nextScreen7:
                 Intent roteiro = new Intent (this, RoteiroAdapter.class);
                 roteiro.putExtra("EMAIL", email);

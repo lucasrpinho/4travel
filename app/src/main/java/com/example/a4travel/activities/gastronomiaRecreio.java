@@ -95,68 +95,82 @@ public class gastronomiaRecreio extends AppCompatActivity implements View.OnClic
                 String gastronomia = bahamas.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnBahamasNoturno:
                 gastronomia = bahamas.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnReiManha:
                 gastronomia = reidorecreio.getText().toString().trim();
                 databaseHelper.addGastronomiaMatinal(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnReiAlmoço:
                 gastronomia = reidorecreio.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnReiNoturno:
                 gastronomia = reidorecreio.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnRioSulAlmoço:
                 gastronomia = riosul.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnRioSulNoturno:
                 gastronomia = riosul.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnRiozenVespertino:
                 gastronomia = riozen.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnRioZenNoturno:
                 gastronomia = riozen.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnParmeAlmoço:
                 gastronomia = parme.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnParmeNoturno:
                 gastronomia = parme.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnNabrasaAlmoço:
                 gastronomia = nabrasa.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnNabrasaNoturno:
                 gastronomia = nabrasa.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnKacuaAlmoço:
                 gastronomia = kacua.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnKacuaNoturno:
                 gastronomia = kacua.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.nextScreen:
                 email = getIntent().getStringExtra("EMAIL");
                 if (opcao.equals("completo")){
                     Intent passeio = new Intent(this, passeiosRecreio.class);
                     passeio.putExtra("EMAIL", email);
-                    passeio.putExtra("OPÇÃO", opcao);
                     startActivity(passeio);
                     break;
                 }

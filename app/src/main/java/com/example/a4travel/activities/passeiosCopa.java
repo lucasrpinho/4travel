@@ -77,42 +77,52 @@ public class passeiosCopa extends AppCompatActivity implements View.OnClickListe
                 String passeio = chacrinha.getText().toString().trim();
                 databaseHelper.addPasseioMatinal(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnChacrinhaTarde:
                 passeio = chacrinha.getText().toString().trim();
                 databaseHelper.addPasseioVespertino(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnCarlosManha:
                 passeio = carlos.getText().toString().trim();
                 databaseHelper.addPasseioMatinal(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnCarlosTarde:
                 passeio = carlos.getText().toString().trim();
                 databaseHelper.addPasseioVespertino(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnCarlosNoite:
                 passeio = carlos.getText().toString().trim();
                 databaseHelper.addPasseioNoturno(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnCalçadaoManha:
                 passeio = calcadao.getText().toString().trim();
                 databaseHelper.addPasseioMatinal(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnCalçadaoTarde:
                 passeio = calcadao.getText().toString().trim();
                 databaseHelper.addPasseioVespertino(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnCalçadaoNoite:
                 passeio = calcadao.getText().toString().trim();
                 databaseHelper.addPasseioNoturno(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnMuseuForteManha:
                 passeio = museudoforte.getText().toString().trim();
                 databaseHelper.addPasseioMatinal(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnMuseuForteTarde:
                 passeio = museudoforte.getText().toString().trim();
                 databaseHelper.addPasseioVespertino(email, passeio);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.nextScreen5:
                 Intent roteiro = new Intent(this, RoteiroAdapter.class);
                 roteiro.putExtra("EMAIL", email);

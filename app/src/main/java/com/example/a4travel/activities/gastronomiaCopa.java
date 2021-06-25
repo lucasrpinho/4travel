@@ -119,26 +119,32 @@ public class gastronomiaCopa extends AppCompatActivity implements View.OnClickLi
                 gastronomia = doncamillo.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnCamilloNoite:
                 gastronomia = doncamillo.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnConversaAlmoço:
                 gastronomia = conversafora.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnConversaNoite:
                 gastronomia = conversafora.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnPergulaAlmoço:
                 gastronomia = pergula.getText().toString().trim();
                 databaseHelper.addGastronomiaAlmoço(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnPergulaNoite:
                 gastronomia = conversafora.getText().toString().trim();
                 databaseHelper.addGastronomiaNoturno(email, gastronomia);
                 Toast.makeText(this, "Opção adicionada ao roteiro", Toast.LENGTH_SHORT).show();
+                break;
             case R.id.btnPaoCia:
                 gastronomia = paocia.getText().toString().trim();
                 databaseHelper.addGastronomiaMatinal(email, gastronomia);
