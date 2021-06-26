@@ -348,7 +348,7 @@
         android:layout_gravity="center"
         android:textSize="24sp"
         android:backgroundTint="#174280"
-        android:text="PRÓXIMA TELA"/>
+        android:text="AVANÇAR"/>
 
     </LinearLayout>
 

@@ -221,7 +221,7 @@
             android:layout_gravity="center"
             android:textSize="24sp"
             android:backgroundTint="#174280"
-            android:text="VISUALIZE SEU ROTEIRO"/>
+            android:text="AVANÇAR"/>
 
 
     </LinearLayout>
