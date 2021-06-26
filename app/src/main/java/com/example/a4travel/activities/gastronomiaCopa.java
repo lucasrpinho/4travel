@@ -73,6 +73,7 @@ public class gastronomiaCopa extends AppCompatActivity implements View.OnClickLi
         btnEclipseAlmoço.setOnClickListener(this);
         btnEclipseNoite.setOnClickListener(this);
         btnDoncamilloAlmoço.setOnClickListener(this);
+        nextScreen4.setOnClickListener(this);
         btnCamilloNoite.setOnClickListener(this);
         btnConversaforaAlmoço.setOnClickListener(this);
         btnConversaforaNoite.setOnClickListener(this);

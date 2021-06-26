@@ -67,6 +67,7 @@ public class passeiosCopa extends AppCompatActivity implements View.OnClickListe
         btnCalcadaoManha.setOnClickListener(this);
         btnCalcadaoTarde.setOnClickListener(this);
         btnCalcadaoNoite.setOnClickListener(this);
+        nextScreen5.setOnClickListener(this);
     }
 
     @Override

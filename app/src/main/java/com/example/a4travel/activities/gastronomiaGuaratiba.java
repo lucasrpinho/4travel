@@ -40,6 +40,7 @@ public class gastronomiaGuaratiba extends AppCompatActivity implements View.OnCl
         aquarios = (TextView) findViewById(R.id.aquarios);
         mirante = (TextView) findViewById(R.id.mirante);
         tiapenha = (TextView) findViewById(R.id.tiapenha);
+        alegria = (TextView) findViewById(R.id.alegria);
         btnAquariosAlmoço = (ImageButton) findViewById(R.id.btnAquariosAlmoço);
         btnAquariosNoite = (ImageButton) findViewById(R.id.btnAquariosNoite);
         btnBiraAlmoço = (ImageButton) findViewById(R.id.btnBiraAlmoço);
